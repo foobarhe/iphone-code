@@ -1,0 +1,281 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		63EAE8DB156933D6000DC779 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EAE8DA156933D6000DC779 /* UIKit.framework */; };
+		63EAE8DD156933D6000DC779 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EAE8DC156933D6000DC779 /* Foundation.framework */; };
+		63EAE8DF156933D6000DC779 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EAE8DE156933D6000DC779 /* CoreGraphics.framework */; };
+		63EAE8E5156933D6000DC779 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63EAE8E3156933D6000DC779 /* InfoPlist.strings */; };
+		63EAE8E7156933D7000DC779 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EAE8E6156933D6000DC779 /* main.m */; };
+		63EAE8EB156933D7000DC779 /* HideKeyboardAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EAE8EA156933D7000DC779 /* HideKeyboardAppDelegate.m */; };
+		63EAE8EE156933D7000DC779 /* HideKeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EAE8ED156933D7000DC779 /* HideKeyboardViewController.m */; };
+		63EAE8F1156933D7000DC779 /* HideKeyboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63EAE8EF156933D7000DC779 /* HideKeyboardViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		63EAE8D6156933D6000DC779 /* HideKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HideKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		63EAE8DA156933D6000DC779 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		63EAE8DC156933D6000DC779 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		63EAE8DE156933D6000DC779 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		63EAE8E2156933D6000DC779 /* HideKeyboard-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HideKeyboard-Info.plist"; sourceTree = "<group>"; };
+		63EAE8E4156933D6000DC779 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		63EAE8E6156933D6000DC779 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		63EAE8E8156933D7000DC779 /* HideKeyboard-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HideKeyboard-Prefix.pch"; sourceTree = "<group>"; };
+		63EAE8E9156933D7000DC779 /* HideKeyboardAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HideKeyboardAppDelegate.h; sourceTree = "<group>"; };
+		63EAE8EA156933D7000DC779 /* HideKeyboardAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HideKeyboardAppDelegate.m; sourceTree = "<group>"; };
+		63EAE8EC156933D7000DC779 /* HideKeyboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HideKeyboardViewController.h; sourceTree = "<group>"; };
+		63EAE8ED156933D7000DC779 /* HideKeyboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HideKeyboardViewController.m; sourceTree = "<group>"; };
+		63EAE8F0156933D7000DC779 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HideKeyboardViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63EAE8D3156933D6000DC779 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63EAE8DB156933D6000DC779 /* UIKit.framework in Frameworks */,
+				63EAE8DD156933D6000DC779 /* Foundation.framework in Frameworks */,
+				63EAE8DF156933D6000DC779 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		63EAE8CB156933D6000DC779 = {
+			isa = PBXGroup;
+			children = (
+				63EAE8E0156933D6000DC779 /* HideKeyboard */,
+				63EAE8D9156933D6000DC779 /* Frameworks */,
+				63EAE8D7156933D6000DC779 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		63EAE8D7156933D6000DC779 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63EAE8D6156933D6000DC779 /* HideKeyboard.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63EAE8D9156933D6000DC779 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63EAE8DA156933D6000DC779 /* UIKit.framework */,
+				63EAE8DC156933D6000DC779 /* Foundation.framework */,
+				63EAE8DE156933D6000DC779 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63EAE8E0156933D6000DC779 /* HideKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				63EAE8E9156933D7000DC779 /* HideKeyboardAppDelegate.h */,
+				63EAE8EA156933D7000DC779 /* HideKeyboardAppDelegate.m */,
+				63EAE8EC156933D7000DC779 /* HideKeyboardViewController.h */,
+				63EAE8ED156933D7000DC779 /* HideKeyboardViewController.m */,
+				63EAE8EF156933D7000DC779 /* HideKeyboardViewController.xib */,
+				63EAE8E1156933D6000DC779 /* Supporting Files */,
+			);
+			path = HideKeyboard;
+			sourceTree = "<group>";
+		};
+		63EAE8E1156933D6000DC779 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				63EAE8E2156933D6000DC779 /* HideKeyboard-Info.plist */,
+				63EAE8E3156933D6000DC779 /* InfoPlist.strings */,
+				63EAE8E6156933D6000DC779 /* main.m */,
+				63EAE8E8156933D7000DC779 /* HideKeyboard-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		63EAE8D5156933D6000DC779 /* HideKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63EAE8F4156933D7000DC779 /* Build configuration list for PBXNativeTarget "HideKeyboard" */;
+			buildPhases = (
+				63EAE8D2156933D6000DC779 /* Sources */,
+				63EAE8D3156933D6000DC779 /* Frameworks */,
+				63EAE8D4156933D6000DC779 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HideKeyboard;
+			productName = HideKeyboard;
+			productReference = 63EAE8D6156933D6000DC779 /* HideKeyboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		63EAE8CD156933D6000DC779 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 63EAE8D0156933D6000DC779 /* Build configuration list for PBXProject "HideKeyboard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 63EAE8CB156933D6000DC779;
+			productRefGroup = 63EAE8D7156933D6000DC779 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63EAE8D5156933D6000DC779 /* HideKeyboard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		63EAE8D4156933D6000DC779 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63EAE8E5156933D6000DC779 /* InfoPlist.strings in Resources */,
+				63EAE8F1156933D7000DC779 /* HideKeyboardViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63EAE8D2156933D6000DC779 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63EAE8E7156933D7000DC779 /* main.m in Sources */,
+				63EAE8EB156933D7000DC779 /* HideKeyboardAppDelegate.m in Sources */,
+				63EAE8EE156933D7000DC779 /* HideKeyboardViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		63EAE8E3156933D6000DC779 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63EAE8E4156933D6000DC779 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		63EAE8EF156933D7000DC779 /* HideKeyboardViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63EAE8F0156933D7000DC779 /* en */,
+			);
+			name = HideKeyboardViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		63EAE8F2156933D7000DC779 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		63EAE8F3156933D7000DC779 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		63EAE8F5156933D7000DC779 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HideKeyboard/HideKeyboard-Prefix.pch";
+				INFOPLIST_FILE = "HideKeyboard/HideKeyboard-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		63EAE8F6156933D7000DC779 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HideKeyboard/HideKeyboard-Prefix.pch";
+				INFOPLIST_FILE = "HideKeyboard/HideKeyboard-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		63EAE8D0156933D6000DC779 /* Build configuration list for PBXProject "HideKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63EAE8F2156933D7000DC779 /* Debug */,
+				63EAE8F3156933D7000DC779 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63EAE8F4156933D7000DC779 /* Build configuration list for PBXNativeTarget "HideKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63EAE8F5156933D7000DC779 /* Debug */,
+				63EAE8F6156933D7000DC779 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 63EAE8CD156933D6000DC779 /* Project object */;
+}
