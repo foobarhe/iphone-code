@@ -1,0 +1,317 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		393D4A17156BE5E20079B058 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393D4A16156BE5E20079B058 /* UIKit.framework */; };
+		393D4A19156BE5E20079B058 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393D4A18156BE5E20079B058 /* Foundation.framework */; };
+		393D4A1B156BE5E20079B058 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393D4A1A156BE5E20079B058 /* CoreGraphics.framework */; };
+		393D4A21156BE5E20079B058 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 393D4A1F156BE5E20079B058 /* InfoPlist.strings */; };
+		393D4A23156BE5E20079B058 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 393D4A22156BE5E20079B058 /* main.m */; };
+		393D4A27156BE5E20079B058 /* TVAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 393D4A26156BE5E20079B058 /* TVAppDelegate.m */; };
+		393D4A2A156BE5E20079B058 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393D4A28156BE5E20079B058 /* MainStoryboard.storyboard */; };
+		393D4A35156BE89A0079B058 /* NBATableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 393D4A34156BE89A0079B058 /* NBATableViewController.m */; };
+		393D4A43156BF2740079B058 /* durant.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 393D4A3C156BF2740079B058 /* durant.jpg */; };
+		393D4A44156BF2740079B058 /* griffin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 393D4A3D156BF2740079B058 /* griffin.jpg */; };
+		393D4A45156BF2740079B058 /* howard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 393D4A3E156BF2740079B058 /* howard.jpg */; };
+		393D4A46156BF2740079B058 /* james.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 393D4A3F156BF2740079B058 /* james.jpg */; };
+		393D4A47156BF2740079B058 /* kobe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 393D4A40156BF2740079B058 /* kobe.jpg */; };
+		393D4A48156BF2740079B058 /* paul.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 393D4A41156BF2740079B058 /* paul.jpg */; };
+		393D4A49156BF2740079B058 /* wade.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 393D4A42156BF2740079B058 /* wade.jpg */; };
+		393D4A50156BF3610079B058 /* NBATableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 393D4A4F156BF3610079B058 /* NBATableViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		393D4A12156BE5E20079B058 /* TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		393D4A16156BE5E20079B058 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		393D4A18156BE5E20079B058 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		393D4A1A156BE5E20079B058 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		393D4A1E156BE5E20079B058 /* TableView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TableView-Info.plist"; sourceTree = "<group>"; };
+		393D4A20156BE5E20079B058 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		393D4A22156BE5E20079B058 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		393D4A24156BE5E20079B058 /* TableView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TableView-Prefix.pch"; sourceTree = "<group>"; };
+		393D4A25156BE5E20079B058 /* TVAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TVAppDelegate.h; sourceTree = "<group>"; };
+		393D4A26156BE5E20079B058 /* TVAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TVAppDelegate.m; sourceTree = "<group>"; };
+		393D4A29156BE5E20079B058 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		393D4A33156BE89A0079B058 /* NBATableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBATableViewController.h; sourceTree = "<group>"; };
+		393D4A34156BE89A0079B058 /* NBATableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBATableViewController.m; sourceTree = "<group>"; };
+		393D4A3C156BF2740079B058 /* durant.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = durant.jpg; sourceTree = "<group>"; };
+		393D4A3D156BF2740079B058 /* griffin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = griffin.jpg; sourceTree = "<group>"; };
+		393D4A3E156BF2740079B058 /* howard.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = howard.jpg; sourceTree = "<group>"; };
+		393D4A3F156BF2740079B058 /* james.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = james.jpg; sourceTree = "<group>"; };
+		393D4A40156BF2740079B058 /* kobe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kobe.jpg; sourceTree = "<group>"; };
+		393D4A41156BF2740079B058 /* paul.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paul.jpg; sourceTree = "<group>"; };
+		393D4A42156BF2740079B058 /* wade.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wade.jpg; sourceTree = "<group>"; };
+		393D4A4E156BF3610079B058 /* NBATableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBATableViewCell.h; sourceTree = "<group>"; };
+		393D4A4F156BF3610079B058 /* NBATableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBATableViewCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		393D4A0F156BE5E20079B058 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				393D4A17156BE5E20079B058 /* UIKit.framework in Frameworks */,
+				393D4A19156BE5E20079B058 /* Foundation.framework in Frameworks */,
+				393D4A1B156BE5E20079B058 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		393D4A07156BE5E20079B058 = {
+			isa = PBXGroup;
+			children = (
+				393D4A1C156BE5E20079B058 /* TableView */,
+				393D4A15156BE5E20079B058 /* Frameworks */,
+				393D4A13156BE5E20079B058 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		393D4A13156BE5E20079B058 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				393D4A12156BE5E20079B058 /* TableView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		393D4A15156BE5E20079B058 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				393D4A16156BE5E20079B058 /* UIKit.framework */,
+				393D4A18156BE5E20079B058 /* Foundation.framework */,
+				393D4A1A156BE5E20079B058 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		393D4A1C156BE5E20079B058 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				393D4A4E156BF3610079B058 /* NBATableViewCell.h */,
+				393D4A4F156BF3610079B058 /* NBATableViewCell.m */,
+				393D4A33156BE89A0079B058 /* NBATableViewController.h */,
+				393D4A34156BE89A0079B058 /* NBATableViewController.m */,
+				393D4A25156BE5E20079B058 /* TVAppDelegate.h */,
+				393D4A26156BE5E20079B058 /* TVAppDelegate.m */,
+				393D4A28156BE5E20079B058 /* MainStoryboard.storyboard */,
+				393D4A1D156BE5E20079B058 /* Supporting Files */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		393D4A1D156BE5E20079B058 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				393D4A3C156BF2740079B058 /* durant.jpg */,
+				393D4A3D156BF2740079B058 /* griffin.jpg */,
+				393D4A3E156BF2740079B058 /* howard.jpg */,
+				393D4A3F156BF2740079B058 /* james.jpg */,
+				393D4A40156BF2740079B058 /* kobe.jpg */,
+				393D4A41156BF2740079B058 /* paul.jpg */,
+				393D4A42156BF2740079B058 /* wade.jpg */,
+				393D4A1E156BE5E20079B058 /* TableView-Info.plist */,
+				393D4A1F156BE5E20079B058 /* InfoPlist.strings */,
+				393D4A22156BE5E20079B058 /* main.m */,
+				393D4A24156BE5E20079B058 /* TableView-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		393D4A11156BE5E20079B058 /* TableView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 393D4A30156BE5E20079B058 /* Build configuration list for PBXNativeTarget "TableView" */;
+			buildPhases = (
+				393D4A0E156BE5E20079B058 /* Sources */,
+				393D4A0F156BE5E20079B058 /* Frameworks */,
+				393D4A10156BE5E20079B058 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TableView;
+			productName = TableView;
+			productReference = 393D4A12156BE5E20079B058 /* TableView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		393D4A09156BE5E20079B058 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TV;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 393D4A0C156BE5E20079B058 /* Build configuration list for PBXProject "TableView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 393D4A07156BE5E20079B058;
+			productRefGroup = 393D4A13156BE5E20079B058 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				393D4A11156BE5E20079B058 /* TableView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		393D4A10156BE5E20079B058 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				393D4A21156BE5E20079B058 /* InfoPlist.strings in Resources */,
+				393D4A2A156BE5E20079B058 /* MainStoryboard.storyboard in Resources */,
+				393D4A43156BF2740079B058 /* durant.jpg in Resources */,
+				393D4A44156BF2740079B058 /* griffin.jpg in Resources */,
+				393D4A45156BF2740079B058 /* howard.jpg in Resources */,
+				393D4A46156BF2740079B058 /* james.jpg in Resources */,
+				393D4A47156BF2740079B058 /* kobe.jpg in Resources */,
+				393D4A48156BF2740079B058 /* paul.jpg in Resources */,
+				393D4A49156BF2740079B058 /* wade.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		393D4A0E156BE5E20079B058 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				393D4A23156BE5E20079B058 /* main.m in Sources */,
+				393D4A27156BE5E20079B058 /* TVAppDelegate.m in Sources */,
+				393D4A35156BE89A0079B058 /* NBATableViewController.m in Sources */,
+				393D4A50156BF3610079B058 /* NBATableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		393D4A1F156BE5E20079B058 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				393D4A20156BE5E20079B058 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		393D4A28156BE5E20079B058 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				393D4A29156BE5E20079B058 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		393D4A2E156BE5E20079B058 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		393D4A2F156BE5E20079B058 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		393D4A31156BE5E20079B058 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TableView/TableView-Prefix.pch";
+				INFOPLIST_FILE = "TableView/TableView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		393D4A32156BE5E20079B058 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TableView/TableView-Prefix.pch";
+				INFOPLIST_FILE = "TableView/TableView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		393D4A0C156BE5E20079B058 /* Build configuration list for PBXProject "TableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				393D4A2E156BE5E20079B058 /* Debug */,
+				393D4A2F156BE5E20079B058 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		393D4A30156BE5E20079B058 /* Build configuration list for PBXNativeTarget "TableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				393D4A31156BE5E20079B058 /* Debug */,
+				393D4A32156BE5E20079B058 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 393D4A09156BE5E20079B058 /* Project object */;
+}
