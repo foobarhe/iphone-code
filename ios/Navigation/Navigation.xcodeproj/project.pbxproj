@@ -1,0 +1,322 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3947E527156D2999001B7256 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3947E526156D2999001B7256 /* UIKit.framework */; };
+		3947E529156D2999001B7256 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3947E528156D2999001B7256 /* Foundation.framework */; };
+		3947E52B156D2999001B7256 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3947E52A156D2999001B7256 /* CoreGraphics.framework */; };
+		3947E531156D2999001B7256 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3947E52F156D2999001B7256 /* InfoPlist.strings */; };
+		3947E533156D2999001B7256 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3947E532156D2999001B7256 /* main.m */; };
+		3947E537156D2999001B7256 /* NavAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3947E536156D2999001B7256 /* NavAppDelegate.m */; };
+		3947E53A156D2999001B7256 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3947E538156D2999001B7256 /* MainStoryboard.storyboard */; };
+		3947E545156D2D7E001B7256 /* StarsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3947E544156D2D7E001B7256 /* StarsTableViewController.m */; };
+		3947E551156D2EA1001B7256 /* StarsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3947E550156D2EA1001B7256 /* StarsTableViewCell.m */; };
+		3947E554156D336E001B7256 /* StarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3947E553156D336E001B7256 /* StarViewController.m */; };
+		3947E55C156D385D001B7256 /* durant.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3947E555156D385D001B7256 /* durant.jpg */; };
+		3947E55D156D385D001B7256 /* griffin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3947E556156D385D001B7256 /* griffin.jpg */; };
+		3947E55E156D385D001B7256 /* howard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3947E557156D385D001B7256 /* howard.jpg */; };
+		3947E55F156D385D001B7256 /* james.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3947E558156D385D001B7256 /* james.jpg */; };
+		3947E560156D385D001B7256 /* kobe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3947E559156D385D001B7256 /* kobe.jpg */; };
+		3947E561156D385D001B7256 /* paul.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3947E55A156D385D001B7256 /* paul.jpg */; };
+		3947E562156D385D001B7256 /* wade.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3947E55B156D385D001B7256 /* wade.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3947E522156D2999001B7256 /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3947E526156D2999001B7256 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3947E528156D2999001B7256 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3947E52A156D2999001B7256 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3947E52E156D2999001B7256 /* Navigation-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Navigation-Info.plist"; sourceTree = "<group>"; };
+		3947E530156D2999001B7256 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3947E532156D2999001B7256 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3947E534156D2999001B7256 /* Navigation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Navigation-Prefix.pch"; sourceTree = "<group>"; };
+		3947E535156D2999001B7256 /* NavAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavAppDelegate.h; sourceTree = "<group>"; };
+		3947E536156D2999001B7256 /* NavAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavAppDelegate.m; sourceTree = "<group>"; };
+		3947E539156D2999001B7256 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		3947E543156D2D7E001B7256 /* StarsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarsTableViewController.h; sourceTree = "<group>"; };
+		3947E544156D2D7E001B7256 /* StarsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarsTableViewController.m; sourceTree = "<group>"; };
+		3947E54F156D2EA1001B7256 /* StarsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarsTableViewCell.h; sourceTree = "<group>"; };
+		3947E550156D2EA1001B7256 /* StarsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarsTableViewCell.m; sourceTree = "<group>"; };
+		3947E552156D336E001B7256 /* StarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarViewController.h; sourceTree = "<group>"; };
+		3947E553156D336E001B7256 /* StarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarViewController.m; sourceTree = "<group>"; };
+		3947E555156D385D001B7256 /* durant.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = durant.jpg; sourceTree = "<group>"; };
+		3947E556156D385D001B7256 /* griffin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = griffin.jpg; sourceTree = "<group>"; };
+		3947E557156D385D001B7256 /* howard.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = howard.jpg; sourceTree = "<group>"; };
+		3947E558156D385D001B7256 /* james.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = james.jpg; sourceTree = "<group>"; };
+		3947E559156D385D001B7256 /* kobe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kobe.jpg; sourceTree = "<group>"; };
+		3947E55A156D385D001B7256 /* paul.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paul.jpg; sourceTree = "<group>"; };
+		3947E55B156D385D001B7256 /* wade.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wade.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3947E51F156D2999001B7256 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3947E527156D2999001B7256 /* UIKit.framework in Frameworks */,
+				3947E529156D2999001B7256 /* Foundation.framework in Frameworks */,
+				3947E52B156D2999001B7256 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3947E517156D2999001B7256 = {
+			isa = PBXGroup;
+			children = (
+				3947E52C156D2999001B7256 /* Navigation */,
+				3947E525156D2999001B7256 /* Frameworks */,
+				3947E523156D2999001B7256 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3947E523156D2999001B7256 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3947E522156D2999001B7256 /* Navigation.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3947E525156D2999001B7256 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3947E526156D2999001B7256 /* UIKit.framework */,
+				3947E528156D2999001B7256 /* Foundation.framework */,
+				3947E52A156D2999001B7256 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3947E52C156D2999001B7256 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				3947E54F156D2EA1001B7256 /* StarsTableViewCell.h */,
+				3947E550156D2EA1001B7256 /* StarsTableViewCell.m */,
+				3947E535156D2999001B7256 /* NavAppDelegate.h */,
+				3947E536156D2999001B7256 /* NavAppDelegate.m */,
+				3947E538156D2999001B7256 /* MainStoryboard.storyboard */,
+				3947E552156D336E001B7256 /* StarViewController.h */,
+				3947E553156D336E001B7256 /* StarViewController.m */,
+				3947E543156D2D7E001B7256 /* StarsTableViewController.h */,
+				3947E544156D2D7E001B7256 /* StarsTableViewController.m */,
+				3947E52D156D2999001B7256 /* Supporting Files */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		3947E52D156D2999001B7256 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3947E555156D385D001B7256 /* durant.jpg */,
+				3947E556156D385D001B7256 /* griffin.jpg */,
+				3947E557156D385D001B7256 /* howard.jpg */,
+				3947E558156D385D001B7256 /* james.jpg */,
+				3947E559156D385D001B7256 /* kobe.jpg */,
+				3947E55A156D385D001B7256 /* paul.jpg */,
+				3947E55B156D385D001B7256 /* wade.jpg */,
+				3947E52E156D2999001B7256 /* Navigation-Info.plist */,
+				3947E52F156D2999001B7256 /* InfoPlist.strings */,
+				3947E532156D2999001B7256 /* main.m */,
+				3947E534156D2999001B7256 /* Navigation-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3947E521156D2999001B7256 /* Navigation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3947E540156D2999001B7256 /* Build configuration list for PBXNativeTarget "Navigation" */;
+			buildPhases = (
+				3947E51E156D2999001B7256 /* Sources */,
+				3947E51F156D2999001B7256 /* Frameworks */,
+				3947E520156D2999001B7256 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Navigation;
+			productName = Navigation;
+			productReference = 3947E522156D2999001B7256 /* Navigation.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3947E519156D2999001B7256 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Nav;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 3947E51C156D2999001B7256 /* Build configuration list for PBXProject "Navigation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3947E517156D2999001B7256;
+			productRefGroup = 3947E523156D2999001B7256 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3947E521156D2999001B7256 /* Navigation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3947E520156D2999001B7256 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3947E531156D2999001B7256 /* InfoPlist.strings in Resources */,
+				3947E53A156D2999001B7256 /* MainStoryboard.storyboard in Resources */,
+				3947E55C156D385D001B7256 /* durant.jpg in Resources */,
+				3947E55D156D385D001B7256 /* griffin.jpg in Resources */,
+				3947E55E156D385D001B7256 /* howard.jpg in Resources */,
+				3947E55F156D385D001B7256 /* james.jpg in Resources */,
+				3947E560156D385D001B7256 /* kobe.jpg in Resources */,
+				3947E561156D385D001B7256 /* paul.jpg in Resources */,
+				3947E562156D385D001B7256 /* wade.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3947E51E156D2999001B7256 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3947E533156D2999001B7256 /* main.m in Sources */,
+				3947E537156D2999001B7256 /* NavAppDelegate.m in Sources */,
+				3947E545156D2D7E001B7256 /* StarsTableViewController.m in Sources */,
+				3947E551156D2EA1001B7256 /* StarsTableViewCell.m in Sources */,
+				3947E554156D336E001B7256 /* StarViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3947E52F156D2999001B7256 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3947E530156D2999001B7256 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3947E538156D2999001B7256 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3947E539156D2999001B7256 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3947E53E156D2999001B7256 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3947E53F156D2999001B7256 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3947E541156D2999001B7256 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Navigation/Navigation-Prefix.pch";
+				INFOPLIST_FILE = "Navigation/Navigation-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3947E542156D2999001B7256 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Navigation/Navigation-Prefix.pch";
+				INFOPLIST_FILE = "Navigation/Navigation-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3947E51C156D2999001B7256 /* Build configuration list for PBXProject "Navigation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3947E53E156D2999001B7256 /* Debug */,
+				3947E53F156D2999001B7256 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3947E540156D2999001B7256 /* Build configuration list for PBXNativeTarget "Navigation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3947E541156D2999001B7256 /* Debug */,
+				3947E542156D2999001B7256 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3947E519156D2999001B7256 /* Project object */;
+}
