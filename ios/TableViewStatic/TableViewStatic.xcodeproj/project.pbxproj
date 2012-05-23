@@ -14,8 +14,8 @@
 		3947E4EF156D1C6C001B7256 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3947E4EE156D1C6C001B7256 /* main.m */; };
 		3947E4F3156D1C6C001B7256 /* TVSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3947E4F2156D1C6C001B7256 /* TVSAppDelegate.m */; };
 		3947E4F6156D1C6C001B7256 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3947E4F4156D1C6C001B7256 /* MainStoryboard.storyboard */; };
-		3947E504156D1F61001B7256 /* TVSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3947E503156D1F61001B7256 /* TVSTableViewController.m */; };
 		3947E506156D20F0001B7256 /* kobe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3947E505156D20F0001B7256 /* kobe.jpg */; };
+		3947E516156D2585001B7256 /* TVSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3947E515156D2585001B7256 /* TVSTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,9 +30,9 @@
 		3947E4F1156D1C6C001B7256 /* TVSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TVSAppDelegate.h; sourceTree = "<group>"; };
 		3947E4F2156D1C6C001B7256 /* TVSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TVSAppDelegate.m; sourceTree = "<group>"; };
 		3947E4F5156D1C6C001B7256 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		3947E502156D1F61001B7256 /* TVSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TVSTableViewController.h; path = ../TVSTableViewController.h; sourceTree = "<group>"; };
-		3947E503156D1F61001B7256 /* TVSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TVSTableViewController.m; path = ../TVSTableViewController.m; sourceTree = "<group>"; };
 		3947E505156D20F0001B7256 /* kobe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kobe.jpg; sourceTree = "<group>"; };
+		3947E514156D2585001B7256 /* TVSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVSTableViewController.h; sourceTree = "<group>"; };
+		3947E515156D2585001B7256 /* TVSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVSTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +79,8 @@
 		3947E4E8156D1C6C001B7256 /* TableViewStatic */ = {
 			isa = PBXGroup;
 			children = (
-				3947E502156D1F61001B7256 /* TVSTableViewController.h */,
-				3947E503156D1F61001B7256 /* TVSTableViewController.m */,
+				3947E514156D2585001B7256 /* TVSTableViewController.h */,
+				3947E515156D2585001B7256 /* TVSTableViewController.m */,
 				3947E4F1156D1C6C001B7256 /* TVSAppDelegate.h */,
 				3947E4F2156D1C6C001B7256 /* TVSAppDelegate.m */,
 				3947E4F4156D1C6C001B7256 /* MainStoryboard.storyboard */,
@@ -167,7 +167,7 @@
 			files = (
 				3947E4EF156D1C6C001B7256 /* main.m in Sources */,
 				3947E4F3156D1C6C001B7256 /* TVSAppDelegate.m in Sources */,
-				3947E504156D1F61001B7256 /* TVSTableViewController.m in Sources */,
+				3947E516156D2585001B7256 /* TVSTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +279,7 @@
 				3947E4FE156D1C6C001B7256 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
