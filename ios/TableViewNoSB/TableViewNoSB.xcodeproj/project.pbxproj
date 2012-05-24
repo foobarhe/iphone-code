@@ -1,0 +1,302 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		39E0C12C156E7281002A0123 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39E0C12B156E7281002A0123 /* UIKit.framework */; };
+		39E0C12E156E7281002A0123 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39E0C12D156E7281002A0123 /* Foundation.framework */; };
+		39E0C130156E7281002A0123 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39E0C12F156E7281002A0123 /* CoreGraphics.framework */; };
+		39E0C136156E7281002A0123 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 39E0C134156E7281002A0123 /* InfoPlist.strings */; };
+		39E0C138156E7281002A0123 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E0C137156E7281002A0123 /* main.m */; };
+		39E0C13C156E7281002A0123 /* TVAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E0C13B156E7281002A0123 /* TVAppDelegate.m */; };
+		39E0C13F156E7281002A0123 /* TVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E0C13E156E7281002A0123 /* TVViewController.m */; };
+		39E0C142156E7281002A0123 /* TVViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39E0C140156E7281002A0123 /* TVViewController.xib */; };
+		39E0C14D156E7703002A0123 /* griffin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 39E0C148156E7703002A0123 /* griffin.jpg */; };
+		39E0C14E156E7703002A0123 /* howard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 39E0C149156E7703002A0123 /* howard.jpg */; };
+		39E0C14F156E7703002A0123 /* james.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 39E0C14A156E7703002A0123 /* james.jpg */; };
+		39E0C150156E7703002A0123 /* kobe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 39E0C14B156E7703002A0123 /* kobe.jpg */; };
+		39E0C151156E7703002A0123 /* paul.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 39E0C14C156E7703002A0123 /* paul.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		39E0C127156E7281002A0123 /* TableViewNoSB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewNoSB.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		39E0C12B156E7281002A0123 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		39E0C12D156E7281002A0123 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		39E0C12F156E7281002A0123 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		39E0C133156E7281002A0123 /* TableViewNoSB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TableViewNoSB-Info.plist"; sourceTree = "<group>"; };
+		39E0C135156E7281002A0123 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		39E0C137156E7281002A0123 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		39E0C139156E7281002A0123 /* TableViewNoSB-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TableViewNoSB-Prefix.pch"; sourceTree = "<group>"; };
+		39E0C13A156E7281002A0123 /* TVAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TVAppDelegate.h; sourceTree = "<group>"; };
+		39E0C13B156E7281002A0123 /* TVAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TVAppDelegate.m; sourceTree = "<group>"; };
+		39E0C13D156E7281002A0123 /* TVViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TVViewController.h; sourceTree = "<group>"; };
+		39E0C13E156E7281002A0123 /* TVViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TVViewController.m; sourceTree = "<group>"; };
+		39E0C141156E7281002A0123 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TVViewController.xib; sourceTree = "<group>"; };
+		39E0C148156E7703002A0123 /* griffin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = griffin.jpg; sourceTree = "<group>"; };
+		39E0C149156E7703002A0123 /* howard.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = howard.jpg; sourceTree = "<group>"; };
+		39E0C14A156E7703002A0123 /* james.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = james.jpg; sourceTree = "<group>"; };
+		39E0C14B156E7703002A0123 /* kobe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kobe.jpg; sourceTree = "<group>"; };
+		39E0C14C156E7703002A0123 /* paul.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paul.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		39E0C124156E7281002A0123 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39E0C12C156E7281002A0123 /* UIKit.framework in Frameworks */,
+				39E0C12E156E7281002A0123 /* Foundation.framework in Frameworks */,
+				39E0C130156E7281002A0123 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		39E0C11C156E7281002A0123 = {
+			isa = PBXGroup;
+			children = (
+				39E0C131156E7281002A0123 /* TableViewNoSB */,
+				39E0C12A156E7281002A0123 /* Frameworks */,
+				39E0C128156E7281002A0123 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		39E0C128156E7281002A0123 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				39E0C127156E7281002A0123 /* TableViewNoSB.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		39E0C12A156E7281002A0123 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				39E0C12B156E7281002A0123 /* UIKit.framework */,
+				39E0C12D156E7281002A0123 /* Foundation.framework */,
+				39E0C12F156E7281002A0123 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		39E0C131156E7281002A0123 /* TableViewNoSB */ = {
+			isa = PBXGroup;
+			children = (
+				39E0C13A156E7281002A0123 /* TVAppDelegate.h */,
+				39E0C13B156E7281002A0123 /* TVAppDelegate.m */,
+				39E0C13D156E7281002A0123 /* TVViewController.h */,
+				39E0C13E156E7281002A0123 /* TVViewController.m */,
+				39E0C140156E7281002A0123 /* TVViewController.xib */,
+				39E0C132156E7281002A0123 /* Supporting Files */,
+			);
+			path = TableViewNoSB;
+			sourceTree = "<group>";
+		};
+		39E0C132156E7281002A0123 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				39E0C148156E7703002A0123 /* griffin.jpg */,
+				39E0C149156E7703002A0123 /* howard.jpg */,
+				39E0C14A156E7703002A0123 /* james.jpg */,
+				39E0C14B156E7703002A0123 /* kobe.jpg */,
+				39E0C14C156E7703002A0123 /* paul.jpg */,
+				39E0C133156E7281002A0123 /* TableViewNoSB-Info.plist */,
+				39E0C134156E7281002A0123 /* InfoPlist.strings */,
+				39E0C137156E7281002A0123 /* main.m */,
+				39E0C139156E7281002A0123 /* TableViewNoSB-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		39E0C126156E7281002A0123 /* TableViewNoSB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39E0C145156E7281002A0123 /* Build configuration list for PBXNativeTarget "TableViewNoSB" */;
+			buildPhases = (
+				39E0C123156E7281002A0123 /* Sources */,
+				39E0C124156E7281002A0123 /* Frameworks */,
+				39E0C125156E7281002A0123 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TableViewNoSB;
+			productName = TableViewNoSB;
+			productReference = 39E0C127156E7281002A0123 /* TableViewNoSB.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		39E0C11E156E7281002A0123 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TV;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 39E0C121156E7281002A0123 /* Build configuration list for PBXProject "TableViewNoSB" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 39E0C11C156E7281002A0123;
+			productRefGroup = 39E0C128156E7281002A0123 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				39E0C126156E7281002A0123 /* TableViewNoSB */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		39E0C125156E7281002A0123 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39E0C136156E7281002A0123 /* InfoPlist.strings in Resources */,
+				39E0C142156E7281002A0123 /* TVViewController.xib in Resources */,
+				39E0C14D156E7703002A0123 /* griffin.jpg in Resources */,
+				39E0C14E156E7703002A0123 /* howard.jpg in Resources */,
+				39E0C14F156E7703002A0123 /* james.jpg in Resources */,
+				39E0C150156E7703002A0123 /* kobe.jpg in Resources */,
+				39E0C151156E7703002A0123 /* paul.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		39E0C123156E7281002A0123 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39E0C138156E7281002A0123 /* main.m in Sources */,
+				39E0C13C156E7281002A0123 /* TVAppDelegate.m in Sources */,
+				39E0C13F156E7281002A0123 /* TVViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		39E0C134156E7281002A0123 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				39E0C135156E7281002A0123 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		39E0C140156E7281002A0123 /* TVViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				39E0C141156E7281002A0123 /* en */,
+			);
+			name = TVViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		39E0C143156E7281002A0123 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		39E0C144156E7281002A0123 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		39E0C146156E7281002A0123 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TableViewNoSB/TableViewNoSB-Prefix.pch";
+				INFOPLIST_FILE = "TableViewNoSB/TableViewNoSB-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		39E0C147156E7281002A0123 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TableViewNoSB/TableViewNoSB-Prefix.pch";
+				INFOPLIST_FILE = "TableViewNoSB/TableViewNoSB-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		39E0C121156E7281002A0123 /* Build configuration list for PBXProject "TableViewNoSB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39E0C143156E7281002A0123 /* Debug */,
+				39E0C144156E7281002A0123 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		39E0C145156E7281002A0123 /* Build configuration list for PBXNativeTarget "TableViewNoSB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39E0C146156E7281002A0123 /* Debug */,
+				39E0C147156E7281002A0123 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 39E0C11E156E7281002A0123 /* Project object */;
+}
