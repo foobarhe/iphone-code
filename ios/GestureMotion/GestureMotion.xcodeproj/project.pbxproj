@@ -1,0 +1,281 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6359384A15776404003EE37C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6359384915776404003EE37C /* UIKit.framework */; };
+		6359384C15776404003EE37C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6359384B15776404003EE37C /* Foundation.framework */; };
+		6359384E15776404003EE37C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6359384D15776404003EE37C /* CoreGraphics.framework */; };
+		6359385415776404003EE37C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6359385215776404003EE37C /* InfoPlist.strings */; };
+		6359385615776404003EE37C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6359385515776404003EE37C /* main.m */; };
+		6359385A15776404003EE37C /* GMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6359385915776404003EE37C /* GMAppDelegate.m */; };
+		6359385D15776404003EE37C /* GMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6359385C15776404003EE37C /* GMViewController.m */; };
+		6359386015776404003EE37C /* GMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6359385E15776404003EE37C /* GMViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6359384515776404003EE37C /* GestureMotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GestureMotion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6359384915776404003EE37C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6359384B15776404003EE37C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6359384D15776404003EE37C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6359385115776404003EE37C /* GestureMotion-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GestureMotion-Info.plist"; sourceTree = "<group>"; };
+		6359385315776404003EE37C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6359385515776404003EE37C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6359385715776404003EE37C /* GestureMotion-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GestureMotion-Prefix.pch"; sourceTree = "<group>"; };
+		6359385815776404003EE37C /* GMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMAppDelegate.h; sourceTree = "<group>"; };
+		6359385915776404003EE37C /* GMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMAppDelegate.m; sourceTree = "<group>"; };
+		6359385B15776404003EE37C /* GMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMViewController.h; sourceTree = "<group>"; };
+		6359385C15776404003EE37C /* GMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMViewController.m; sourceTree = "<group>"; };
+		6359385F15776404003EE37C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GMViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6359384215776404003EE37C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6359384A15776404003EE37C /* UIKit.framework in Frameworks */,
+				6359384C15776404003EE37C /* Foundation.framework in Frameworks */,
+				6359384E15776404003EE37C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6359383A15776404003EE37C = {
+			isa = PBXGroup;
+			children = (
+				6359384F15776404003EE37C /* GestureMotion */,
+				6359384815776404003EE37C /* Frameworks */,
+				6359384615776404003EE37C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6359384615776404003EE37C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6359384515776404003EE37C /* GestureMotion.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6359384815776404003EE37C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6359384915776404003EE37C /* UIKit.framework */,
+				6359384B15776404003EE37C /* Foundation.framework */,
+				6359384D15776404003EE37C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6359384F15776404003EE37C /* GestureMotion */ = {
+			isa = PBXGroup;
+			children = (
+				6359385815776404003EE37C /* GMAppDelegate.h */,
+				6359385915776404003EE37C /* GMAppDelegate.m */,
+				6359385B15776404003EE37C /* GMViewController.h */,
+				6359385C15776404003EE37C /* GMViewController.m */,
+				6359385E15776404003EE37C /* GMViewController.xib */,
+				6359385015776404003EE37C /* Supporting Files */,
+			);
+			path = GestureMotion;
+			sourceTree = "<group>";
+		};
+		6359385015776404003EE37C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6359385115776404003EE37C /* GestureMotion-Info.plist */,
+				6359385215776404003EE37C /* InfoPlist.strings */,
+				6359385515776404003EE37C /* main.m */,
+				6359385715776404003EE37C /* GestureMotion-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6359384415776404003EE37C /* GestureMotion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6359386315776404003EE37C /* Build configuration list for PBXNativeTarget "GestureMotion" */;
+			buildPhases = (
+				6359384115776404003EE37C /* Sources */,
+				6359384215776404003EE37C /* Frameworks */,
+				6359384315776404003EE37C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GestureMotion;
+			productName = GestureMotion;
+			productReference = 6359384515776404003EE37C /* GestureMotion.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6359383C15776404003EE37C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 6359383F15776404003EE37C /* Build configuration list for PBXProject "GestureMotion" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6359383A15776404003EE37C;
+			productRefGroup = 6359384615776404003EE37C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6359384415776404003EE37C /* GestureMotion */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6359384315776404003EE37C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6359385415776404003EE37C /* InfoPlist.strings in Resources */,
+				6359386015776404003EE37C /* GMViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6359384115776404003EE37C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6359385615776404003EE37C /* main.m in Sources */,
+				6359385A15776404003EE37C /* GMAppDelegate.m in Sources */,
+				6359385D15776404003EE37C /* GMViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6359385215776404003EE37C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6359385315776404003EE37C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6359385E15776404003EE37C /* GMViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6359385F15776404003EE37C /* en */,
+			);
+			name = GMViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6359386115776404003EE37C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6359386215776404003EE37C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6359386415776404003EE37C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GestureMotion/GestureMotion-Prefix.pch";
+				INFOPLIST_FILE = "GestureMotion/GestureMotion-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6359386515776404003EE37C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GestureMotion/GestureMotion-Prefix.pch";
+				INFOPLIST_FILE = "GestureMotion/GestureMotion-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6359383F15776404003EE37C /* Build configuration list for PBXProject "GestureMotion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6359386115776404003EE37C /* Debug */,
+				6359386215776404003EE37C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6359386315776404003EE37C /* Build configuration list for PBXNativeTarget "GestureMotion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6359386415776404003EE37C /* Debug */,
+				6359386515776404003EE37C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6359383C15776404003EE37C /* Project object */;
+}

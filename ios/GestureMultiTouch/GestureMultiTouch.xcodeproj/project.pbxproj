@@ -1,0 +1,281 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6359381E157754D4003EE37C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6359381D157754D4003EE37C /* UIKit.framework */; };
+		63593820157754D4003EE37C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6359381F157754D4003EE37C /* Foundation.framework */; };
+		63593822157754D4003EE37C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63593821157754D4003EE37C /* CoreGraphics.framework */; };
+		63593828157754D4003EE37C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63593826157754D4003EE37C /* InfoPlist.strings */; };
+		6359382A157754D4003EE37C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63593829157754D4003EE37C /* main.m */; };
+		6359382E157754D4003EE37C /* MTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6359382D157754D4003EE37C /* MTAppDelegate.m */; };
+		63593831157754D4003EE37C /* MTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63593830157754D4003EE37C /* MTViewController.m */; };
+		63593834157754D4003EE37C /* MTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63593832157754D4003EE37C /* MTViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		63593819157754D4003EE37C /* GestureMultiTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GestureMultiTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6359381D157754D4003EE37C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6359381F157754D4003EE37C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		63593821157754D4003EE37C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		63593825157754D4003EE37C /* GestureMultiTouch-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GestureMultiTouch-Info.plist"; sourceTree = "<group>"; };
+		63593827157754D4003EE37C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		63593829157754D4003EE37C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6359382B157754D4003EE37C /* GestureMultiTouch-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GestureMultiTouch-Prefix.pch"; sourceTree = "<group>"; };
+		6359382C157754D4003EE37C /* MTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTAppDelegate.h; sourceTree = "<group>"; };
+		6359382D157754D4003EE37C /* MTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTAppDelegate.m; sourceTree = "<group>"; };
+		6359382F157754D4003EE37C /* MTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTViewController.h; sourceTree = "<group>"; };
+		63593830157754D4003EE37C /* MTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTViewController.m; sourceTree = "<group>"; };
+		63593833157754D4003EE37C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MTViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63593816157754D4003EE37C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6359381E157754D4003EE37C /* UIKit.framework in Frameworks */,
+				63593820157754D4003EE37C /* Foundation.framework in Frameworks */,
+				63593822157754D4003EE37C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6359380E157754D4003EE37C = {
+			isa = PBXGroup;
+			children = (
+				63593823157754D4003EE37C /* GestureMultiTouch */,
+				6359381C157754D4003EE37C /* Frameworks */,
+				6359381A157754D4003EE37C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6359381A157754D4003EE37C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63593819157754D4003EE37C /* GestureMultiTouch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6359381C157754D4003EE37C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6359381D157754D4003EE37C /* UIKit.framework */,
+				6359381F157754D4003EE37C /* Foundation.framework */,
+				63593821157754D4003EE37C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63593823157754D4003EE37C /* GestureMultiTouch */ = {
+			isa = PBXGroup;
+			children = (
+				6359382C157754D4003EE37C /* MTAppDelegate.h */,
+				6359382D157754D4003EE37C /* MTAppDelegate.m */,
+				6359382F157754D4003EE37C /* MTViewController.h */,
+				63593830157754D4003EE37C /* MTViewController.m */,
+				63593832157754D4003EE37C /* MTViewController.xib */,
+				63593824157754D4003EE37C /* Supporting Files */,
+			);
+			path = GestureMultiTouch;
+			sourceTree = "<group>";
+		};
+		63593824157754D4003EE37C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				63593825157754D4003EE37C /* GestureMultiTouch-Info.plist */,
+				63593826157754D4003EE37C /* InfoPlist.strings */,
+				63593829157754D4003EE37C /* main.m */,
+				6359382B157754D4003EE37C /* GestureMultiTouch-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		63593818157754D4003EE37C /* GestureMultiTouch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63593837157754D4003EE37C /* Build configuration list for PBXNativeTarget "GestureMultiTouch" */;
+			buildPhases = (
+				63593815157754D4003EE37C /* Sources */,
+				63593816157754D4003EE37C /* Frameworks */,
+				63593817157754D4003EE37C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GestureMultiTouch;
+			productName = GestureMultiTouch;
+			productReference = 63593819157754D4003EE37C /* GestureMultiTouch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		63593810157754D4003EE37C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 63593813157754D4003EE37C /* Build configuration list for PBXProject "GestureMultiTouch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6359380E157754D4003EE37C;
+			productRefGroup = 6359381A157754D4003EE37C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63593818157754D4003EE37C /* GestureMultiTouch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		63593817157754D4003EE37C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63593828157754D4003EE37C /* InfoPlist.strings in Resources */,
+				63593834157754D4003EE37C /* MTViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63593815157754D4003EE37C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6359382A157754D4003EE37C /* main.m in Sources */,
+				6359382E157754D4003EE37C /* MTAppDelegate.m in Sources */,
+				63593831157754D4003EE37C /* MTViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		63593826157754D4003EE37C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63593827157754D4003EE37C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		63593832157754D4003EE37C /* MTViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63593833157754D4003EE37C /* en */,
+			);
+			name = MTViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		63593835157754D4003EE37C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		63593836157754D4003EE37C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		63593838157754D4003EE37C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GestureMultiTouch/GestureMultiTouch-Prefix.pch";
+				INFOPLIST_FILE = "GestureMultiTouch/GestureMultiTouch-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		63593839157754D4003EE37C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GestureMultiTouch/GestureMultiTouch-Prefix.pch";
+				INFOPLIST_FILE = "GestureMultiTouch/GestureMultiTouch-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		63593813157754D4003EE37C /* Build configuration list for PBXProject "GestureMultiTouch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63593835157754D4003EE37C /* Debug */,
+				63593836157754D4003EE37C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63593837157754D4003EE37C /* Build configuration list for PBXNativeTarget "GestureMultiTouch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63593838157754D4003EE37C /* Debug */,
+				63593839157754D4003EE37C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 63593810157754D4003EE37C /* Project object */;
+}
