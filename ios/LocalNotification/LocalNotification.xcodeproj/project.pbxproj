@@ -1,0 +1,282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		39461AB0157D036900EEAF76 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39461AAF157D036900EEAF76 /* UIKit.framework */; };
+		39461AB2157D036900EEAF76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39461AB1157D036900EEAF76 /* Foundation.framework */; };
+		39461AB4157D036900EEAF76 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39461AB3157D036900EEAF76 /* CoreGraphics.framework */; };
+		39461ABA157D036900EEAF76 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 39461AB8157D036900EEAF76 /* InfoPlist.strings */; };
+		39461ABC157D036900EEAF76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39461ABB157D036900EEAF76 /* main.m */; };
+		39461AC0157D036900EEAF76 /* LNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39461ABF157D036900EEAF76 /* LNAppDelegate.m */; };
+		39461AC3157D036900EEAF76 /* LNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39461AC2157D036900EEAF76 /* LNViewController.m */; };
+		39461AC6157D036900EEAF76 /* LNViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39461AC4157D036900EEAF76 /* LNViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		39461AAB157D036900EEAF76 /* LocalNotification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalNotification.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		39461AAF157D036900EEAF76 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		39461AB1157D036900EEAF76 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		39461AB3157D036900EEAF76 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		39461AB7157D036900EEAF76 /* LocalNotification-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LocalNotification-Info.plist"; sourceTree = "<group>"; };
+		39461AB9157D036900EEAF76 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		39461ABB157D036900EEAF76 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		39461ABD157D036900EEAF76 /* LocalNotification-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LocalNotification-Prefix.pch"; sourceTree = "<group>"; };
+		39461ABE157D036900EEAF76 /* LNAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LNAppDelegate.h; sourceTree = "<group>"; };
+		39461ABF157D036900EEAF76 /* LNAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LNAppDelegate.m; sourceTree = "<group>"; };
+		39461AC1157D036900EEAF76 /* LNViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LNViewController.h; sourceTree = "<group>"; };
+		39461AC2157D036900EEAF76 /* LNViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LNViewController.m; sourceTree = "<group>"; };
+		39461AC5157D036900EEAF76 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LNViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		39461AA8157D036900EEAF76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39461AB0157D036900EEAF76 /* UIKit.framework in Frameworks */,
+				39461AB2157D036900EEAF76 /* Foundation.framework in Frameworks */,
+				39461AB4157D036900EEAF76 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		39461AA0157D036900EEAF76 = {
+			isa = PBXGroup;
+			children = (
+				39461AB5157D036900EEAF76 /* LocalNotification */,
+				39461AAE157D036900EEAF76 /* Frameworks */,
+				39461AAC157D036900EEAF76 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		39461AAC157D036900EEAF76 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				39461AAB157D036900EEAF76 /* LocalNotification.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		39461AAE157D036900EEAF76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				39461AAF157D036900EEAF76 /* UIKit.framework */,
+				39461AB1157D036900EEAF76 /* Foundation.framework */,
+				39461AB3157D036900EEAF76 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		39461AB5157D036900EEAF76 /* LocalNotification */ = {
+			isa = PBXGroup;
+			children = (
+				39461ABE157D036900EEAF76 /* LNAppDelegate.h */,
+				39461ABF157D036900EEAF76 /* LNAppDelegate.m */,
+				39461AC1157D036900EEAF76 /* LNViewController.h */,
+				39461AC2157D036900EEAF76 /* LNViewController.m */,
+				39461AC4157D036900EEAF76 /* LNViewController.xib */,
+				39461AB6157D036900EEAF76 /* Supporting Files */,
+			);
+			path = LocalNotification;
+			sourceTree = "<group>";
+		};
+		39461AB6157D036900EEAF76 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				39461AB7157D036900EEAF76 /* LocalNotification-Info.plist */,
+				39461AB8157D036900EEAF76 /* InfoPlist.strings */,
+				39461ABB157D036900EEAF76 /* main.m */,
+				39461ABD157D036900EEAF76 /* LocalNotification-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		39461AAA157D036900EEAF76 /* LocalNotification */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39461AC9157D036900EEAF76 /* Build configuration list for PBXNativeTarget "LocalNotification" */;
+			buildPhases = (
+				39461AA7157D036900EEAF76 /* Sources */,
+				39461AA8157D036900EEAF76 /* Frameworks */,
+				39461AA9157D036900EEAF76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LocalNotification;
+			productName = LocalNotification;
+			productReference = 39461AAB157D036900EEAF76 /* LocalNotification.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		39461AA2157D036900EEAF76 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LN;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 39461AA5157D036900EEAF76 /* Build configuration list for PBXProject "LocalNotification" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 39461AA0157D036900EEAF76;
+			productRefGroup = 39461AAC157D036900EEAF76 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				39461AAA157D036900EEAF76 /* LocalNotification */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		39461AA9157D036900EEAF76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39461ABA157D036900EEAF76 /* InfoPlist.strings in Resources */,
+				39461AC6157D036900EEAF76 /* LNViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		39461AA7157D036900EEAF76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39461ABC157D036900EEAF76 /* main.m in Sources */,
+				39461AC0157D036900EEAF76 /* LNAppDelegate.m in Sources */,
+				39461AC3157D036900EEAF76 /* LNViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		39461AB8157D036900EEAF76 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				39461AB9157D036900EEAF76 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		39461AC4157D036900EEAF76 /* LNViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				39461AC5157D036900EEAF76 /* en */,
+			);
+			name = LNViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		39461AC7157D036900EEAF76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		39461AC8157D036900EEAF76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		39461ACA157D036900EEAF76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LocalNotification/LocalNotification-Prefix.pch";
+				INFOPLIST_FILE = "LocalNotification/LocalNotification-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		39461ACB157D036900EEAF76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LocalNotification/LocalNotification-Prefix.pch";
+				INFOPLIST_FILE = "LocalNotification/LocalNotification-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		39461AA5157D036900EEAF76 /* Build configuration list for PBXProject "LocalNotification" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39461AC7157D036900EEAF76 /* Debug */,
+				39461AC8157D036900EEAF76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		39461AC9157D036900EEAF76 /* Build configuration list for PBXNativeTarget "LocalNotification" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39461ACA157D036900EEAF76 /* Debug */,
+				39461ACB157D036900EEAF76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 39461AA2157D036900EEAF76 /* Project object */;
+}
