@@ -1,0 +1,286 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		39B33C69157E48E900838950 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B33C68157E48E900838950 /* UIKit.framework */; };
+		39B33C6B157E48E900838950 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B33C6A157E48E900838950 /* Foundation.framework */; };
+		39B33C6D157E48E900838950 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B33C6C157E48E900838950 /* CoreGraphics.framework */; };
+		39B33C73157E48E900838950 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 39B33C71157E48E900838950 /* InfoPlist.strings */; };
+		39B33C75157E48E900838950 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B33C74157E48E900838950 /* main.m */; };
+		39B33C79157E48E900838950 /* VPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B33C78157E48E900838950 /* VPAppDelegate.m */; };
+		39B33C7C157E48EA00838950 /* VPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B33C7B157E48EA00838950 /* VPViewController.m */; };
+		39B33C7F157E48EA00838950 /* VPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39B33C7D157E48EA00838950 /* VPViewController.xib */; };
+		39B33C86157E48F700838950 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B33C85157E48F700838950 /* MediaPlayer.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		39B33C64157E48E900838950 /* VideoPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		39B33C68157E48E900838950 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		39B33C6A157E48E900838950 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		39B33C6C157E48E900838950 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		39B33C70157E48E900838950 /* VideoPlay-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VideoPlay-Info.plist"; sourceTree = "<group>"; };
+		39B33C72157E48E900838950 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		39B33C74157E48E900838950 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		39B33C76157E48E900838950 /* VideoPlay-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VideoPlay-Prefix.pch"; sourceTree = "<group>"; };
+		39B33C77157E48E900838950 /* VPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VPAppDelegate.h; sourceTree = "<group>"; };
+		39B33C78157E48E900838950 /* VPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VPAppDelegate.m; sourceTree = "<group>"; };
+		39B33C7A157E48E900838950 /* VPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VPViewController.h; sourceTree = "<group>"; };
+		39B33C7B157E48EA00838950 /* VPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VPViewController.m; sourceTree = "<group>"; };
+		39B33C7E157E48EA00838950 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/VPViewController.xib; sourceTree = "<group>"; };
+		39B33C85157E48F700838950 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		39B33C61157E48E900838950 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39B33C86157E48F700838950 /* MediaPlayer.framework in Frameworks */,
+				39B33C69157E48E900838950 /* UIKit.framework in Frameworks */,
+				39B33C6B157E48E900838950 /* Foundation.framework in Frameworks */,
+				39B33C6D157E48E900838950 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		39B33C59157E48E900838950 = {
+			isa = PBXGroup;
+			children = (
+				39B33C85157E48F700838950 /* MediaPlayer.framework */,
+				39B33C6E157E48E900838950 /* VideoPlay */,
+				39B33C67157E48E900838950 /* Frameworks */,
+				39B33C65157E48E900838950 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		39B33C65157E48E900838950 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				39B33C64157E48E900838950 /* VideoPlay.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		39B33C67157E48E900838950 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				39B33C68157E48E900838950 /* UIKit.framework */,
+				39B33C6A157E48E900838950 /* Foundation.framework */,
+				39B33C6C157E48E900838950 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		39B33C6E157E48E900838950 /* VideoPlay */ = {
+			isa = PBXGroup;
+			children = (
+				39B33C77157E48E900838950 /* VPAppDelegate.h */,
+				39B33C78157E48E900838950 /* VPAppDelegate.m */,
+				39B33C7A157E48E900838950 /* VPViewController.h */,
+				39B33C7B157E48EA00838950 /* VPViewController.m */,
+				39B33C7D157E48EA00838950 /* VPViewController.xib */,
+				39B33C6F157E48E900838950 /* Supporting Files */,
+			);
+			path = VideoPlay;
+			sourceTree = "<group>";
+		};
+		39B33C6F157E48E900838950 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				39B33C70157E48E900838950 /* VideoPlay-Info.plist */,
+				39B33C71157E48E900838950 /* InfoPlist.strings */,
+				39B33C74157E48E900838950 /* main.m */,
+				39B33C76157E48E900838950 /* VideoPlay-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		39B33C63157E48E900838950 /* VideoPlay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39B33C82157E48EA00838950 /* Build configuration list for PBXNativeTarget "VideoPlay" */;
+			buildPhases = (
+				39B33C60157E48E900838950 /* Sources */,
+				39B33C61157E48E900838950 /* Frameworks */,
+				39B33C62157E48E900838950 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VideoPlay;
+			productName = VideoPlay;
+			productReference = 39B33C64157E48E900838950 /* VideoPlay.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		39B33C5B157E48E900838950 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = VP;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 39B33C5E157E48E900838950 /* Build configuration list for PBXProject "VideoPlay" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 39B33C59157E48E900838950;
+			productRefGroup = 39B33C65157E48E900838950 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				39B33C63157E48E900838950 /* VideoPlay */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		39B33C62157E48E900838950 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39B33C73157E48E900838950 /* InfoPlist.strings in Resources */,
+				39B33C7F157E48EA00838950 /* VPViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		39B33C60157E48E900838950 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39B33C75157E48E900838950 /* main.m in Sources */,
+				39B33C79157E48E900838950 /* VPAppDelegate.m in Sources */,
+				39B33C7C157E48EA00838950 /* VPViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		39B33C71157E48E900838950 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				39B33C72157E48E900838950 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		39B33C7D157E48EA00838950 /* VPViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				39B33C7E157E48EA00838950 /* en */,
+			);
+			name = VPViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		39B33C80157E48EA00838950 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		39B33C81157E48EA00838950 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		39B33C83157E48EA00838950 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VideoPlay/VideoPlay-Prefix.pch";
+				INFOPLIST_FILE = "VideoPlay/VideoPlay-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		39B33C84157E48EA00838950 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VideoPlay/VideoPlay-Prefix.pch";
+				INFOPLIST_FILE = "VideoPlay/VideoPlay-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		39B33C5E157E48E900838950 /* Build configuration list for PBXProject "VideoPlay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39B33C80157E48EA00838950 /* Debug */,
+				39B33C81157E48EA00838950 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		39B33C82157E48EA00838950 /* Build configuration list for PBXNativeTarget "VideoPlay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39B33C83157E48EA00838950 /* Debug */,
+				39B33C84157E48EA00838950 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 39B33C5B157E48E900838950 /* Project object */;
+}
