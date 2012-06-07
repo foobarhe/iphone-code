@@ -1,0 +1,285 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		63AC23B6157EFFF0005FD93E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AC23B5157EFFF0005FD93E /* UIKit.framework */; };
+		63AC23B8157EFFF0005FD93E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AC23B7157EFFF0005FD93E /* Foundation.framework */; };
+		63AC23BA157EFFF0005FD93E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AC23B9157EFFF0005FD93E /* CoreGraphics.framework */; };
+		63AC23C0157EFFF0005FD93E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63AC23BE157EFFF0005FD93E /* InfoPlist.strings */; };
+		63AC23C2157EFFF0005FD93E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AC23C1157EFFF0005FD93E /* main.m */; };
+		63AC23C6157EFFF0005FD93E /* ARAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AC23C5157EFFF0005FD93E /* ARAppDelegate.m */; };
+		63AC23C9157EFFF0005FD93E /* ARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AC23C8157EFFF0005FD93E /* ARViewController.m */; };
+		63AC23CC157EFFF0005FD93E /* ARViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63AC23CA157EFFF0005FD93E /* ARViewController.xib */; };
+		63AC23D3157F0003005FD93E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AC23D2157F0003005FD93E /* AVFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		63AC23B1157EFFF0005FD93E /* AudioRecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioRecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		63AC23B5157EFFF0005FD93E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		63AC23B7157EFFF0005FD93E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		63AC23B9157EFFF0005FD93E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		63AC23BD157EFFF0005FD93E /* AudioRecord-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AudioRecord-Info.plist"; sourceTree = "<group>"; };
+		63AC23BF157EFFF0005FD93E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		63AC23C1157EFFF0005FD93E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		63AC23C3157EFFF0005FD93E /* AudioRecord-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AudioRecord-Prefix.pch"; sourceTree = "<group>"; };
+		63AC23C4157EFFF0005FD93E /* ARAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARAppDelegate.h; sourceTree = "<group>"; };
+		63AC23C5157EFFF0005FD93E /* ARAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARAppDelegate.m; sourceTree = "<group>"; };
+		63AC23C7157EFFF0005FD93E /* ARViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARViewController.h; sourceTree = "<group>"; };
+		63AC23C8157EFFF0005FD93E /* ARViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARViewController.m; sourceTree = "<group>"; };
+		63AC23CB157EFFF0005FD93E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ARViewController.xib; sourceTree = "<group>"; };
+		63AC23D2157F0003005FD93E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63AC23AE157EFFF0005FD93E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63AC23D3157F0003005FD93E /* AVFoundation.framework in Frameworks */,
+				63AC23B6157EFFF0005FD93E /* UIKit.framework in Frameworks */,
+				63AC23B8157EFFF0005FD93E /* Foundation.framework in Frameworks */,
+				63AC23BA157EFFF0005FD93E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		63AC23A6157EFFF0005FD93E = {
+			isa = PBXGroup;
+			children = (
+				63AC23D2157F0003005FD93E /* AVFoundation.framework */,
+				63AC23BB157EFFF0005FD93E /* AudioRecord */,
+				63AC23B4157EFFF0005FD93E /* Frameworks */,
+				63AC23B2157EFFF0005FD93E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		63AC23B2157EFFF0005FD93E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63AC23B1157EFFF0005FD93E /* AudioRecord.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63AC23B4157EFFF0005FD93E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63AC23B5157EFFF0005FD93E /* UIKit.framework */,
+				63AC23B7157EFFF0005FD93E /* Foundation.framework */,
+				63AC23B9157EFFF0005FD93E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63AC23BB157EFFF0005FD93E /* AudioRecord */ = {
+			isa = PBXGroup;
+			children = (
+				63AC23C4157EFFF0005FD93E /* ARAppDelegate.h */,
+				63AC23C5157EFFF0005FD93E /* ARAppDelegate.m */,
+				63AC23C7157EFFF0005FD93E /* ARViewController.h */,
+				63AC23C8157EFFF0005FD93E /* ARViewController.m */,
+				63AC23CA157EFFF0005FD93E /* ARViewController.xib */,
+				63AC23BC157EFFF0005FD93E /* Supporting Files */,
+			);
+			path = AudioRecord;
+			sourceTree = "<group>";
+		};
+		63AC23BC157EFFF0005FD93E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				63AC23BD157EFFF0005FD93E /* AudioRecord-Info.plist */,
+				63AC23BE157EFFF0005FD93E /* InfoPlist.strings */,
+				63AC23C1157EFFF0005FD93E /* main.m */,
+				63AC23C3157EFFF0005FD93E /* AudioRecord-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		63AC23B0157EFFF0005FD93E /* AudioRecord */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63AC23CF157EFFF0005FD93E /* Build configuration list for PBXNativeTarget "AudioRecord" */;
+			buildPhases = (
+				63AC23AD157EFFF0005FD93E /* Sources */,
+				63AC23AE157EFFF0005FD93E /* Frameworks */,
+				63AC23AF157EFFF0005FD93E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AudioRecord;
+			productName = AudioRecord;
+			productReference = 63AC23B1157EFFF0005FD93E /* AudioRecord.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		63AC23A8157EFFF0005FD93E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 63AC23AB157EFFF0005FD93E /* Build configuration list for PBXProject "AudioRecord" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 63AC23A6157EFFF0005FD93E;
+			productRefGroup = 63AC23B2157EFFF0005FD93E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63AC23B0157EFFF0005FD93E /* AudioRecord */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		63AC23AF157EFFF0005FD93E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63AC23C0157EFFF0005FD93E /* InfoPlist.strings in Resources */,
+				63AC23CC157EFFF0005FD93E /* ARViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63AC23AD157EFFF0005FD93E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63AC23C2157EFFF0005FD93E /* main.m in Sources */,
+				63AC23C6157EFFF0005FD93E /* ARAppDelegate.m in Sources */,
+				63AC23C9157EFFF0005FD93E /* ARViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		63AC23BE157EFFF0005FD93E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63AC23BF157EFFF0005FD93E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		63AC23CA157EFFF0005FD93E /* ARViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63AC23CB157EFFF0005FD93E /* en */,
+			);
+			name = ARViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		63AC23CD157EFFF0005FD93E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		63AC23CE157EFFF0005FD93E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		63AC23D0157EFFF0005FD93E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AudioRecord/AudioRecord-Prefix.pch";
+				INFOPLIST_FILE = "AudioRecord/AudioRecord-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		63AC23D1157EFFF0005FD93E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AudioRecord/AudioRecord-Prefix.pch";
+				INFOPLIST_FILE = "AudioRecord/AudioRecord-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		63AC23AB157EFFF0005FD93E /* Build configuration list for PBXProject "AudioRecord" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63AC23CD157EFFF0005FD93E /* Debug */,
+				63AC23CE157EFFF0005FD93E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63AC23CF157EFFF0005FD93E /* Build configuration list for PBXNativeTarget "AudioRecord" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63AC23D0157EFFF0005FD93E /* Debug */,
+				63AC23D1157EFFF0005FD93E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 63AC23A8157EFFF0005FD93E /* Project object */;
+}

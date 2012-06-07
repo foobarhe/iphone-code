@@ -1,0 +1,234 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		63D0DEA81580594C009E0F15 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D0DEA71580594C009E0F15 /* Foundation.framework */; };
+		63D0DEAB1580594C009E0F15 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D0DEAA1580594C009E0F15 /* main.m */; };
+		63D0DEAF1580594C009E0F15 /* fast_enumeration.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 63D0DEAE1580594C009E0F15 /* fast_enumeration.1 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		63D0DEA11580594B009E0F15 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				63D0DEAF1580594C009E0F15 /* fast_enumeration.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		63D0DEA31580594C009E0F15 /* fast-enumeration */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "fast-enumeration"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63D0DEA71580594C009E0F15 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		63D0DEAA1580594C009E0F15 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		63D0DEAD1580594C009E0F15 /* fast-enumeration-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "fast-enumeration-Prefix.pch"; sourceTree = "<group>"; };
+		63D0DEAE1580594C009E0F15 /* fast_enumeration.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = fast_enumeration.1; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63D0DEA01580594B009E0F15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63D0DEA81580594C009E0F15 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		63D0DE981580594B009E0F15 = {
+			isa = PBXGroup;
+			children = (
+				63D0DEA91580594C009E0F15 /* fast-enumeration */,
+				63D0DEA61580594C009E0F15 /* Frameworks */,
+				63D0DEA41580594C009E0F15 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		63D0DEA41580594C009E0F15 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63D0DEA31580594C009E0F15 /* fast-enumeration */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63D0DEA61580594C009E0F15 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63D0DEA71580594C009E0F15 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63D0DEA91580594C009E0F15 /* fast-enumeration */ = {
+			isa = PBXGroup;
+			children = (
+				63D0DEAA1580594C009E0F15 /* main.m */,
+				63D0DEAE1580594C009E0F15 /* fast_enumeration.1 */,
+				63D0DEAC1580594C009E0F15 /* Supporting Files */,
+			);
+			path = "fast-enumeration";
+			sourceTree = "<group>";
+		};
+		63D0DEAC1580594C009E0F15 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				63D0DEAD1580594C009E0F15 /* fast-enumeration-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		63D0DEA21580594B009E0F15 /* fast-enumeration */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63D0DEB21580594C009E0F15 /* Build configuration list for PBXNativeTarget "fast-enumeration" */;
+			buildPhases = (
+				63D0DE9F1580594B009E0F15 /* Sources */,
+				63D0DEA01580594B009E0F15 /* Frameworks */,
+				63D0DEA11580594B009E0F15 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "fast-enumeration";
+			productName = "fast-enumeration";
+			productReference = 63D0DEA31580594C009E0F15 /* fast-enumeration */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		63D0DE9A1580594B009E0F15 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 63D0DE9D1580594B009E0F15 /* Build configuration list for PBXProject "fast-enumeration" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 63D0DE981580594B009E0F15;
+			productRefGroup = 63D0DEA41580594C009E0F15 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63D0DEA21580594B009E0F15 /* fast-enumeration */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63D0DE9F1580594B009E0F15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63D0DEAB1580594C009E0F15 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		63D0DEB01580594C009E0F15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		63D0DEB11580594C009E0F15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		63D0DEB31580594C009E0F15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "fast-enumeration/fast-enumeration-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		63D0DEB41580594C009E0F15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "fast-enumeration/fast-enumeration-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		63D0DE9D1580594B009E0F15 /* Build configuration list for PBXProject "fast-enumeration" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63D0DEB01580594C009E0F15 /* Debug */,
+				63D0DEB11580594C009E0F15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63D0DEB21580594C009E0F15 /* Build configuration list for PBXNativeTarget "fast-enumeration" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63D0DEB31580594C009E0F15 /* Debug */,
+				63D0DEB41580594C009E0F15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 63D0DE9A1580594B009E0F15 /* Project object */;
+}
