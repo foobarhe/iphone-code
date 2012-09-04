@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'fast-enumeration' target in the 'fast-enumeration' project
-//
-
-#ifdef __OBJC__
-    #import <Foundation/Foundation.h>
-#endif
