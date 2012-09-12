@@ -1,0 +1,380 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		63A7DAEA16006AC600665C26 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A7DAE916006AC600665C26 /* UIKit.framework */; };
+		63A7DAEC16006AC600665C26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A7DAEB16006AC600665C26 /* Foundation.framework */; };
+		63A7DAEE16006AC600665C26 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A7DAED16006AC600665C26 /* CoreGraphics.framework */; };
+		63A7DAF416006AC600665C26 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63A7DAF216006AC600665C26 /* InfoPlist.strings */; };
+		63A7DAF616006AC600665C26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A7DAF516006AC600665C26 /* main.m */; };
+		63A7DAFA16006AC600665C26 /* FireAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A7DAF916006AC600665C26 /* FireAppDelegate.m */; };
+		63A7DAFD16006AC600665C26 /* FireViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A7DAFC16006AC600665C26 /* FireViewController.m */; };
+		63A7DB0016006AC600665C26 /* FireViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63A7DAFE16006AC600665C26 /* FireViewController.xib */; };
+		63A7DB0A16006F6600665C26 /* BackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A7DB0816006F6600665C26 /* BackViewController.m */; };
+		63A7DB0B16006F6600665C26 /* BackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63A7DB0916006F6600665C26 /* BackViewController.xib */; };
+		63A7DB1F1600712200665C26 /* campfire.png in Resources */ = {isa = PBXBuildFile; fileRef = 63A7DB0D1600712200665C26 /* campfire.png */; };
+		63A7DB201600712200665C26 /* campFire01.gif in Resources */ = {isa = PBXBuildFile; fileRef = 63A7DB0E1600712200665C26 /* campFire01.gif */; };
+		63A7DB211600712200665C26 /* campFire02.gif in Resources */ = {isa = PBXBuildFile; fileRef = 63A7DB0F1600712200665C26 /* campFire02.gif */; };
+		63A7DB221600712200665C26 /* campFire03.gif in Resources */ = {isa = PBXBuildFile; fileRef = 63A7DB101600712200665C26 /* campFire03.gif */; };
+		63A7DB231600712200665C26 /* campFire04.gif in Resources */ = {isa = PBXBuildFile; fileRef = 63A7DB111600712200665C26 /* campFire04.gif */; };
+		63A7DB241600712200665C26 /* campFire05.gif in Resources */ = {isa = PBXBuildFile; fileRef = 63A7DB121600712200665C26 /* campFire05.gif */; };
+		63A7DB251600712200665C26 /* campFire06.gif in Resources */ = {isa = PBXBuildFile; fileRef = 63A7DB131600712200665C26 /* campFire06.gif */; };
+		63A7DB261600712200665C26 /* campFire07.gif in Resources */ = {isa = PBXBuildFile; fileRef = 63A7DB141600712200665C26 /* campFire07.gif */; };
+		63A7DB271600712200665C26 /* campFire08.gif in Resources */ = {isa = PBXBuildFile; fileRef = 63A7DB151600712200665C26 /* campFire08.gif */; };
+		63A7DB281600712200665C26 /* campFire09.gif in Resources */ = {isa = PBXBuildFile; fileRef = 63A7DB161600712200665C26 /* campFire09.gif */; };
+		63A7DB291600712200665C26 /* campFire10.gif in Resources */ = {isa = PBXBuildFile; fileRef = 63A7DB171600712200665C26 /* campFire10.gif */; };
+		63A7DB2A1600712200665C26 /* campFire11.gif in Resources */ = {isa = PBXBuildFile; fileRef = 63A7DB181600712200665C26 /* campFire11.gif */; };
+		63A7DB2B1600712200665C26 /* campFire12.gif in Resources */ = {isa = PBXBuildFile; fileRef = 63A7DB191600712200665C26 /* campFire12.gif */; };
+		63A7DB2C1600712200665C26 /* campFire13.gif in Resources */ = {isa = PBXBuildFile; fileRef = 63A7DB1A1600712200665C26 /* campFire13.gif */; };
+		63A7DB2D1600712200665C26 /* campFire14.gif in Resources */ = {isa = PBXBuildFile; fileRef = 63A7DB1B1600712200665C26 /* campFire14.gif */; };
+		63A7DB2E1600712200665C26 /* campFire15.gif in Resources */ = {isa = PBXBuildFile; fileRef = 63A7DB1C1600712200665C26 /* campFire15.gif */; };
+		63A7DB2F1600712200665C26 /* campFire16.gif in Resources */ = {isa = PBXBuildFile; fileRef = 63A7DB1D1600712200665C26 /* campFire16.gif */; };
+		63A7DB301600712200665C26 /* campFire17.gif in Resources */ = {isa = PBXBuildFile; fileRef = 63A7DB1E1600712200665C26 /* campFire17.gif */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		63A7DAE516006AC600665C26 /* Fire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fire.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		63A7DAE916006AC600665C26 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		63A7DAEB16006AC600665C26 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		63A7DAED16006AC600665C26 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		63A7DAF116006AC600665C26 /* Fire-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Fire-Info.plist"; sourceTree = "<group>"; };
+		63A7DAF316006AC600665C26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		63A7DAF516006AC600665C26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		63A7DAF716006AC600665C26 /* Fire-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fire-Prefix.pch"; sourceTree = "<group>"; };
+		63A7DAF816006AC600665C26 /* FireAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FireAppDelegate.h; sourceTree = "<group>"; };
+		63A7DAF916006AC600665C26 /* FireAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FireAppDelegate.m; sourceTree = "<group>"; };
+		63A7DAFB16006AC600665C26 /* FireViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FireViewController.h; sourceTree = "<group>"; };
+		63A7DAFC16006AC600665C26 /* FireViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FireViewController.m; sourceTree = "<group>"; };
+		63A7DAFF16006AC600665C26 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FireViewController.xib; sourceTree = "<group>"; };
+		63A7DB0716006F6600665C26 /* BackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackViewController.h; sourceTree = "<group>"; };
+		63A7DB0816006F6600665C26 /* BackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackViewController.m; sourceTree = "<group>"; };
+		63A7DB0916006F6600665C26 /* BackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackViewController.xib; sourceTree = "<group>"; };
+		63A7DB0D1600712200665C26 /* campfire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = campfire.png; sourceTree = "<group>"; };
+		63A7DB0E1600712200665C26 /* campFire01.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = campFire01.gif; sourceTree = "<group>"; };
+		63A7DB0F1600712200665C26 /* campFire02.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = campFire02.gif; sourceTree = "<group>"; };
+		63A7DB101600712200665C26 /* campFire03.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = campFire03.gif; sourceTree = "<group>"; };
+		63A7DB111600712200665C26 /* campFire04.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = campFire04.gif; sourceTree = "<group>"; };
+		63A7DB121600712200665C26 /* campFire05.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = campFire05.gif; sourceTree = "<group>"; };
+		63A7DB131600712200665C26 /* campFire06.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = campFire06.gif; sourceTree = "<group>"; };
+		63A7DB141600712200665C26 /* campFire07.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = campFire07.gif; sourceTree = "<group>"; };
+		63A7DB151600712200665C26 /* campFire08.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = campFire08.gif; sourceTree = "<group>"; };
+		63A7DB161600712200665C26 /* campFire09.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = campFire09.gif; sourceTree = "<group>"; };
+		63A7DB171600712200665C26 /* campFire10.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = campFire10.gif; sourceTree = "<group>"; };
+		63A7DB181600712200665C26 /* campFire11.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = campFire11.gif; sourceTree = "<group>"; };
+		63A7DB191600712200665C26 /* campFire12.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = campFire12.gif; sourceTree = "<group>"; };
+		63A7DB1A1600712200665C26 /* campFire13.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = campFire13.gif; sourceTree = "<group>"; };
+		63A7DB1B1600712200665C26 /* campFire14.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = campFire14.gif; sourceTree = "<group>"; };
+		63A7DB1C1600712200665C26 /* campFire15.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = campFire15.gif; sourceTree = "<group>"; };
+		63A7DB1D1600712200665C26 /* campFire16.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = campFire16.gif; sourceTree = "<group>"; };
+		63A7DB1E1600712200665C26 /* campFire17.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = campFire17.gif; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63A7DAE216006AC600665C26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63A7DAEA16006AC600665C26 /* UIKit.framework in Frameworks */,
+				63A7DAEC16006AC600665C26 /* Foundation.framework in Frameworks */,
+				63A7DAEE16006AC600665C26 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		63A7DADA16006AC500665C26 = {
+			isa = PBXGroup;
+			children = (
+				63A7DB0616006F6600665C26 /* Back */,
+				63A7DAEF16006AC600665C26 /* Fire */,
+				63A7DAE816006AC600665C26 /* Frameworks */,
+				63A7DAE616006AC600665C26 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		63A7DAE616006AC600665C26 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63A7DAE516006AC600665C26 /* Fire.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63A7DAE816006AC600665C26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63A7DAE916006AC600665C26 /* UIKit.framework */,
+				63A7DAEB16006AC600665C26 /* Foundation.framework */,
+				63A7DAED16006AC600665C26 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63A7DAEF16006AC600665C26 /* Fire */ = {
+			isa = PBXGroup;
+			children = (
+				63A7DB0C1600712200665C26 /* images */,
+				63A7DAF816006AC600665C26 /* FireAppDelegate.h */,
+				63A7DAF916006AC600665C26 /* FireAppDelegate.m */,
+				63A7DAFB16006AC600665C26 /* FireViewController.h */,
+				63A7DAFC16006AC600665C26 /* FireViewController.m */,
+				63A7DAFE16006AC600665C26 /* FireViewController.xib */,
+				63A7DAF016006AC600665C26 /* Supporting Files */,
+			);
+			path = Fire;
+			sourceTree = "<group>";
+		};
+		63A7DAF016006AC600665C26 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				63A7DAF116006AC600665C26 /* Fire-Info.plist */,
+				63A7DAF216006AC600665C26 /* InfoPlist.strings */,
+				63A7DAF516006AC600665C26 /* main.m */,
+				63A7DAF716006AC600665C26 /* Fire-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		63A7DB0616006F6600665C26 /* Back */ = {
+			isa = PBXGroup;
+			children = (
+				63A7DB0716006F6600665C26 /* BackViewController.h */,
+				63A7DB0816006F6600665C26 /* BackViewController.m */,
+				63A7DB0916006F6600665C26 /* BackViewController.xib */,
+			);
+			name = Back;
+			path = Fire/Back;
+			sourceTree = "<group>";
+		};
+		63A7DB0C1600712200665C26 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				63A7DB0D1600712200665C26 /* campfire.png */,
+				63A7DB0E1600712200665C26 /* campFire01.gif */,
+				63A7DB0F1600712200665C26 /* campFire02.gif */,
+				63A7DB101600712200665C26 /* campFire03.gif */,
+				63A7DB111600712200665C26 /* campFire04.gif */,
+				63A7DB121600712200665C26 /* campFire05.gif */,
+				63A7DB131600712200665C26 /* campFire06.gif */,
+				63A7DB141600712200665C26 /* campFire07.gif */,
+				63A7DB151600712200665C26 /* campFire08.gif */,
+				63A7DB161600712200665C26 /* campFire09.gif */,
+				63A7DB171600712200665C26 /* campFire10.gif */,
+				63A7DB181600712200665C26 /* campFire11.gif */,
+				63A7DB191600712200665C26 /* campFire12.gif */,
+				63A7DB1A1600712200665C26 /* campFire13.gif */,
+				63A7DB1B1600712200665C26 /* campFire14.gif */,
+				63A7DB1C1600712200665C26 /* campFire15.gif */,
+				63A7DB1D1600712200665C26 /* campFire16.gif */,
+				63A7DB1E1600712200665C26 /* campFire17.gif */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		63A7DAE416006AC600665C26 /* Fire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63A7DB0316006AC600665C26 /* Build configuration list for PBXNativeTarget "Fire" */;
+			buildPhases = (
+				63A7DAE116006AC600665C26 /* Sources */,
+				63A7DAE216006AC600665C26 /* Frameworks */,
+				63A7DAE316006AC600665C26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Fire;
+			productName = Fire;
+			productReference = 63A7DAE516006AC600665C26 /* Fire.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		63A7DADC16006AC500665C26 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 63A7DADF16006AC500665C26 /* Build configuration list for PBXProject "Fire" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 63A7DADA16006AC500665C26;
+			productRefGroup = 63A7DAE616006AC600665C26 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63A7DAE416006AC600665C26 /* Fire */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		63A7DAE316006AC600665C26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63A7DAF416006AC600665C26 /* InfoPlist.strings in Resources */,
+				63A7DB0016006AC600665C26 /* FireViewController.xib in Resources */,
+				63A7DB0B16006F6600665C26 /* BackViewController.xib in Resources */,
+				63A7DB1F1600712200665C26 /* campfire.png in Resources */,
+				63A7DB201600712200665C26 /* campFire01.gif in Resources */,
+				63A7DB211600712200665C26 /* campFire02.gif in Resources */,
+				63A7DB221600712200665C26 /* campFire03.gif in Resources */,
+				63A7DB231600712200665C26 /* campFire04.gif in Resources */,
+				63A7DB241600712200665C26 /* campFire05.gif in Resources */,
+				63A7DB251600712200665C26 /* campFire06.gif in Resources */,
+				63A7DB261600712200665C26 /* campFire07.gif in Resources */,
+				63A7DB271600712200665C26 /* campFire08.gif in Resources */,
+				63A7DB281600712200665C26 /* campFire09.gif in Resources */,
+				63A7DB291600712200665C26 /* campFire10.gif in Resources */,
+				63A7DB2A1600712200665C26 /* campFire11.gif in Resources */,
+				63A7DB2B1600712200665C26 /* campFire12.gif in Resources */,
+				63A7DB2C1600712200665C26 /* campFire13.gif in Resources */,
+				63A7DB2D1600712200665C26 /* campFire14.gif in Resources */,
+				63A7DB2E1600712200665C26 /* campFire15.gif in Resources */,
+				63A7DB2F1600712200665C26 /* campFire16.gif in Resources */,
+				63A7DB301600712200665C26 /* campFire17.gif in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63A7DAE116006AC600665C26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63A7DAF616006AC600665C26 /* main.m in Sources */,
+				63A7DAFA16006AC600665C26 /* FireAppDelegate.m in Sources */,
+				63A7DAFD16006AC600665C26 /* FireViewController.m in Sources */,
+				63A7DB0A16006F6600665C26 /* BackViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		63A7DAF216006AC600665C26 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63A7DAF316006AC600665C26 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		63A7DAFE16006AC600665C26 /* FireViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63A7DAFF16006AC600665C26 /* en */,
+			);
+			name = FireViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		63A7DB0116006AC600665C26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		63A7DB0216006AC600665C26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		63A7DB0416006AC600665C26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Fire/Fire-Prefix.pch";
+				INFOPLIST_FILE = "Fire/Fire-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		63A7DB0516006AC600665C26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Fire/Fire-Prefix.pch";
+				INFOPLIST_FILE = "Fire/Fire-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		63A7DADF16006AC500665C26 /* Build configuration list for PBXProject "Fire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63A7DB0116006AC600665C26 /* Debug */,
+				63A7DB0216006AC600665C26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63A7DB0316006AC600665C26 /* Build configuration list for PBXNativeTarget "Fire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63A7DB0416006AC600665C26 /* Debug */,
+				63A7DB0516006AC600665C26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 63A7DADC16006AC500665C26 /* Project object */;
+}
