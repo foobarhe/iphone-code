@@ -1,0 +1,21 @@
+ios topic: play video
+> camera可以拍摄video
+  # ios本身可以播放一些video；
+  使用 MPMoviePlayerController 实现；
+  该类初始化的时候需要提供一个要播放的media的 URL（可以是local的也可以是网络上的）；
+  # 播放的时候可以是全屏的或潜入到另外的view中；
+  # 默认的movie player包含了一些controls可以方便user控制；
+  通过controlStyle属性可以设置；
+  # 同样的该类也支持action-target pattern，在发生某些事件的时候可以指定callback，例如：
+    movie starting, being paused, enter/leaving full screen mode;
+  # 支持的video format:
+    mov, mp4, mpv, 3gp等；
+> 例子：
+  1) 创建single view application，不使用SB，使用ARC；
+  2）在project中的build phases的link binary with libraries添加：
+    MediaPlayer.framework
+  3) 编辑xib修改UI
+  4) 添加代码
+参考：
+https://github.com/minjhe/iphone-code/tree/master/topics/VideoPlay
+http://www.techotopia.com/index.php/Video_Playback_from_within_an_iOS_5_iPhone_Application

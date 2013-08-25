@@ -1,0 +1,43 @@
+ios topic: local notifications
+> 什么时候可以local notification:
+  # 在multitasking中，我们知道app可以运行在background；
+    使用local的notification，可以使得在background app向用户发送一个notification。
+    因此，可以使用它，让后端运行的app引起user的注意；
+  # local notification和push notification不同，后者需要push server和network；
+  # notification通常是一个alert box，同时可以包含sound或vibration；
+> 实例：
+  目标是运行程序，然后将其放置到background，然后过10秒之后，会发出local notification。
+  1) 创建一个single view application
+  2) app进入到background的时候会调用方法app delegate类的：
+    applicationDidEnterBackground，具体为：
+    -(void) applicationDidEnterBackground: (UIApplication *)application
+    {
+      NSDate *alertTime = [[NSDate date]
+      dateByAddingTimeInterval:10];
+      UIApplication* app = [UIApplication sharedApplication];
+      UILocalNotification* notifyAlarm = [[UILocalNotification alloc] init];
+      if (notifyAlarm)
+      {
+        notifyAlarm.fireDate = alertTime;
+        notifyAlarm.timeZone = [NSTimeZone defaultTimeZone];
+        notifyAlarm.repeatInterval = 0;
+        notifyAlarm.soundName = @"Glass.aiff";
+        notifyAlarm.alertBody = @"Staff meeting in 30 minutes";
+        [app scheduleLocalNotification:notifyAlarm];
+      }   
+    }
+    如果希望cancelling之前设定的notification可以使用：
+      UIApplication* app = [UIApplication sharedApplication];
+      NSArray*    oldNotifications = [app scheduledLocalNotifications];
+     
+      if ([oldNotifications count] > 0)
+        [app cancelAllLocalNotifications];
+    如果希望立即触发notification:
+      NSArray*    notifications = [app scheduledLocalNotifications];
+      if ([notifications count] > 0)
+          [app presentLocalNotificationNow:[notifications objectAtIndex:0]];
+         
+  3）如果需要sound file，可以拖拽到supporting files；
+> 参考：
+  https://github.com/minjhe/iphone-code/tree/master/topics/LocalNotification
+  http://www.techotopia.com/index.php/Scheduling_iOS_5_iPhone_Local_Notifications

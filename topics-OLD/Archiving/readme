@@ -1,0 +1,16 @@
+ios topic: archiving （obj序列号到file中）
+> archiving：
+  # 之前介绍使用file/dir的操作可以对file system和file进行管理和操作；
+  有些情况下，数据是保持在对象中的，如果保持到文件中需要分开保存，然后读取的时候需要重新构建对象；
+  archiving类似serialize和unserialize的方法，可以将对象序列化持久保存在文件中，并恢复；
+  # 主要使用了 Foundation framework提供的2个类：
+   NSKeyedArchiver
+   NSKeyedUnarchiver
+   
+> 实例：
+  # 创建single view application，不使用SB，使用ARC；
+  # 添加各种UI；
+  # 绑定；
+详情参看；
+  https://github.com/minjhe/iphone-code/tree/master/topics/Archiving
+  http://www.techotopia.com/index.php/IOS_5_iPhone_Data_Persistence_using_Archiving

@@ -1,0 +1,152 @@
+ios topic: gestures and gesture recognizer
+[ basic gesture knowledge]
+> interaction:
+  # ios device除了Home键，但部分的交互都是在screen上；
+  # gestures(是一个统称词): taps, touches(multitouches, swipes, and pinches)等
+    taps: single finger快速地点击屏幕；
+    touches: 一个或多个finger和屏幕接触，并可能移动；
+  # 对于touch，它会使得first responder object的4个方法中的一个被调用：
+    touchBegan: finger刚接触屏幕，接受参数。
+      -(void) touchesBegan: (NSSet *)touches withEvent:(UIEvent *)event
+      参数中会包含tapCount，每个touch的coordinates等（可以是全局坐标，也可以是局部坐标）；
+    touchMoved:
+      一个或多个finger在屏幕移动的时候会调用，接受类似的参数；
+    touchEnded:
+      当一个或多个finger离开屏幕的时候被调用；
+    touchCancelled:
+      当更高等级的interrupt的时候（例如电话），touchCancelled方法被调用；
+  # 例如：
+    //获取finger的个数
+      NSUInteger touchCount = [touches count];
+    //获取tap的次数
+      NSUInteger tapCount = [[touches anyObject] tapCount];
+  # 注意，在ios simulator下无法测试multitouch，只能够使用鼠标进行single的测试。
+> responder chain:
+  ios中gestures等的传递是通过responder chain实现的；
+  1）用户在screen上做gesture；
+  2）ios的hardware检测到，并notify给OS；
+  3) OS根据gesture创建event，并把它传递给当前app的event queue；
+  4）event loop会定期从event queue中获取event，并传递给当前的first responder object;
+  5) first responder object（通常为界面中的UI，例如UIButton, UIView等），如果first responder
+  object定义了handle该event的callback，则会处理；
+  如果没有则该event会被discard了；
+  6) first responder object还可以继续将event传递给next responder；
+  其他的responder可以继续那样传递起来，最终的end of chain是 UIApplication object；
+ 但是需要注意：event的forward需要在代码中显式地pass，不会被自动传递：
+  -(void) touchesBegan: (NSSet *)touches withEvent:(UIEvent *)event
+  {
+    [self.nextResponder touchesBegan:touches withEvent:event];
+  }
+参考：
+  http://www.techotopia.com/index.php/An_Overview_of_iOS_5_iPhone_Multitouch%2C_Taps_and_Gestures
+> multitouch实例：
+ # 创建single view application，不使用SB，使用ARC；
+ # 定义界面UI和绑定；选择xib文件在attributes中设置multiple touch；
+ # 实现各个方法：touchesBegan, touchesMoved, touchesEnded；
+ 其中接受的参数touches表示finger的个数，具体可以参看代码：
+   https://github.com/minjhe/iphone-code/tree/master/topics/GestureMultiTouch
+ # 参考：
+   http://www.techotopia.com/index.php/An_Example_iOS_5_iPhone_Touch%2C_Multitouch_and_Tap_Application
+> touch(move)实例：
+ # 创建single view application, 不使用SB，使用ARC;
+ # 创建UI，绑定事件；
+ # 实现callback；
+ 更多参考：
+   https://github.com/minjhe/iphone-code/tree/master/topics/GestureMotion
+ # 参考：
+   http://www.techotopia.com/index.php/Detecting_iOS_5_iPhone_Touch_Screen_Gesture_Motions
+  
+[ gesture recognizer ]
+> Gesture Recognizers
+ # 如上介绍gestures包括taps和touches，然后touches包括各种复杂的pattern:
+    touches, multitouches, swipes, rotations, pinches等；
+ # 如上介绍的gesture(尤其是各种touch pattern的识别）可以通过touchesBegan, touchesMoved,
+ touchesEnded, touchedCancelled等callback来捕捉；
+  实际使用中常见的touches的pattern，开发者需要使用复杂的算法坐标来实现。
+  从ios4开始sdk增加了识别复杂gesture的类：
+    UIGestureRecognizer
+  使用该类或该类的子类可以很方便地识别常见的touches pattern。
+> 类结构为：
+ # 基类：UIGestureRecognizer
+ # 常用的几个子类：
+    UITapGestureRecognizer  //用于识别单击或多击的操作；
+    UIPanGestureRecognizer  //dragging/panning gestures;
+    UIPinchGestureRecognizer  //识别pinch的操作，例如zoom in和zoom out;
+    UISwipeGestureRecognizer  //识别swiping (left, right, up or down);
+    UIRotationGestureRecognizer //识别rotation gesture
+    UILongPressGestureRecognizer  //一个或多个fingers长按screen；
+ # 这些类的使用：
+   通过对view object调用：addGestureRecognizer，可以为view object添加识别某种pattern的类，
+    同时需要传递一个方法，用于作为检测到该种gesture的callback。
+   从view object上移除：removeGestureRecognizer
+   很容易理解：gesture和callback，是典型的target-action model；
+ # gesture的分类：
+   离散型的discrete: taps, multitaps；只会触发callback一次；
+   连续型的continuous: swipes, pans, rotations, pinches, longpress等；会触发callback多次直到gesture ends；
+ # gesture的callback，可以获取 gesture的数据信息；
+> 各种gestures的用法：
+ # tap
+    UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget: self
+                    action: @selector(tapDeteched:)];
+    doubleTap.numberOfTapsRequired = 2;
+    [self.view addGestureRecognizer: doubleTap];
+    //callback方法的定义：
+    -(IBAction)tapDeteched:(UIGestureRecognizer *)sender
+    {
+   
+    }
+ # pinch
+    UIPinchGestureRecognizer *pinchRecognizer =
+      [[UIPinchGestureRecognizer alloc]
+      initWithTarget:self
+      action:@selector(pinchDetected:)];
+    [self.view addGestureRecognizer:pinchRecognizer];
+  # rotation
+    UIRotationGestureRecognizer *rotationRecognizer =
+     [[UIRotationGestureRecognizer alloc]
+     initWithTarget:self
+     action:@selector(rotationDetected:)];
+    [self.view addGestureRecognizer:rotationRecognizer];
+  # pan/dragging
+    UIRotationGestureRecognizer *panRecognizer =
+     [[UIPanGestureRecognizer alloc]
+     initWithTarget:self
+      action:@selector(panDetected:)];
+    [self.view addGestureRecognizer:panRecognizer];
+  # Swipe
+    UISwipeGestureRecognizer *swipeRecognizer =
+      [[UISwipeGestureRecognizer alloc]
+      initWithTarget:self
+      action:@selector(swipeDetected:)];
+    swipeRecognizer.direction = UISwipeGestureRecognizerDirectionUp;
+    [self.view addGestureRecognizer:swipeRecognizer];;
+  direction的值有：
+    UISwipeGestureRecognizerDirectionRight （默认的）
+    UISwipeGestureRecognizerDirectionLeft
+    UISwipeGestureRecognizerDirectionUp
+    USwipeIGestureRecognizerDirectionDown
+  # long press
+    UILongPressGestureRecognizer *longPressRecognizer =
+     [[UILongPressGestureRecognizer alloc]
+     initWithTarget:self
+     action:@selector(longPressDetected:)];
+    longPressRecognizer.minimumPressDuration = 3;
+    longPressRecognizer.numberOfTouchesRequired = 1;
+    [self.view addGestureRecognizer:longPressRecognizer];
+  常见的其他属性：
+    minimumPressDuration
+    numberOfTouchesRequired
+    numberOfTapsRequired
+    allowableMovement
+  参考：
+    http://www.techotopia.com/index.php/Identifying_iPhone_Gestures_using_iOS_5_Gesture_Recognizers
+   
+> 实例：
+  # 创建single view application，不使用SB，使用ARC;
+  # 设计UI，并绑定；
+  # 编写code；
+  # 实例代码参考：
+    https://github.com/minjhe/iphone-code/tree/master/topics/GestureRecognizer
+  注意：除了taps，touches的操作无法在ios simulator中进行测试。
+  参考：
+    http://www.techotopia.com/index.php/An_iPhone_iOS_5_Gesture_Recognition_Tutorial

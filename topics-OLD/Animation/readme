@@ -1,0 +1,45 @@
+ios topic: animation
+> animation
+  ios中各种动画效果通过core animation来实现；
+  例如：fade in/fade out/slide/resize/rotate等；
+  注意：对于3D效果的，需要使用OpenGL ES来实现；
+> view的animation的实现：
+ # animation都是作用在view上的；
+  例如: UIView, UIButton等等；
+ # animation blocks
+  动画效果通过blocks来定义；
+  开始：[UIView beginAnimations:nil context:nil];
+  中间对各种属性的定义：
+       [UIView setAnimationDuration:3];
+       theButton.alpha = 0;
+       ....
+  结束：[UIView commitAnimations];
+ # animation curve:
+  使用UIView的setAnimationCurve，可以设置animation变化的快慢和步调，可选的值有：
+   UIViewAnimationCurveLinear
+   UIViewAnimationCurveEaseOut
+   UIViewAnimationCurveEaseIn
+   UIViewAnimationCurveEaseInOut
+ # 当animation完成的时候可以设定callback:
+   [UIView setAnimationDidStopSelector: @selector(animationFinished:finished:context:)];
+  callback方法的定义：
+   -(void) animationFinished:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context
+   {
+     ...
+   }
+ # rotate/resize/transform等：
+   myView.transform = CGAffineTransformMakeScale(2, 2);
+   myView.transform = CGAffineTransformMakeRotation(90 * M_PI / 180);
+  多种transforming效果的使用：
+   CGAffineTransform scaleTrans = CGAffineTransformMakeScale(2, 2);
+   CGAffineTransform rotateTrans = CGAffineTransformMakeRotation(angle * M_PI / 180);
+   myView.transform = CGAffineTransformConcat(scaleTrans, rotateTrans);
+  
+> 实例：
+ # 创建single view application，不使用SB，使用ARC;
+ # 在xib上添加：UIButton
+ # 修改和绑定；
+ # 实现touchesEnd方法，将button动态地移动到touch的地方：
+ # 参考：
+   https://github.com/minjhe/iphone-code/tree/master/topics/Animation
+   http://www.techotopia.com/index.php/Basic_iOS_5_iPhone_Animation_using_Core_Animation

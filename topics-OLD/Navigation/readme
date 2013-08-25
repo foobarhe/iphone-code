@@ -1,0 +1,252 @@
+ios topic: navigation
+
+> navigation
+  # navigation:
+    navigation和tab bar类似，用于多个view/scene情况的app；
+    它和tab bar不同的是，它以stack的结构来管理多个views；
+    当scene进行navigate的时候，会压栈，点击back键的时候返回；
+    navigation的过程中可以考虑scene之间的数据传递；
+  # ios为其提供的view和view controller:
+    view: UINavigationBar, UINavigationItem；
+    view controller: UINavigationController；
+
+
+> 使用navigation:
+  1) 创建一个project:
+    single view application
+    using storyboard 和 ARC
+  2) 删除自动生成的，不需要的*ViewController.h(m)和canvas上的view/view controller;
+  3) 从右下角拖拽一个UINavigationController到canvas中，它会自动添加如下元素：
+    # Navigation Controller Scene作为入口：它只是一个UINavigationController；
+    # 同时默认地添加了一个Scene (TableView)：table view controller, table view, table cell
+      其实navigation的第一个界面不一定非要是table view，我们可以删除，添加自己的，这里暂时使用这个。
+      这个第一个scene的title，默认叫做Root View Controller，点击可以修改（它其实是一个view: UINavigationItem）。
+  4) 对第一个scene上进行修改，将其改为一个dynamic的table view (参考TableViewDynamic的那个例子）:
+    # 修改navigation item的title为：NBA Stars （同时有back button，如果没设置使用title)；
+    
+    # 在prototype cells上添加控件：一个Label；
+    # new一个新的class：StarsTableViewCell （父类为UITableViewCell），定义：
+      .h中：@property (strong, nonatomic) IBOutlet UILabel *name;
+      .m中：@synthesize name;
+    # 选择prototype cell，在右侧将其class指定为StarsTableViewCell；从左侧Star Table View Cell开始 ctrl+拖拽到cell上的label上进行绑定；
+    
+    # new一个新的class：StarsTableViewController（父类为UITableViewController），定义：
+      .h中：@property (strong, nonatomic) NSArray *stars; 用于保存table view的数据；
+      .m中：在viewDidLoad中初始化stars的数据，并在#pragma mark - Table view data source的部分设置各个cell的数据如何获取；
+    # 到目前位置，app应该能够正常运行，运行之后是一个dynamic的table view。
+    
+  5）添加一个新的scene，作为点击table view cell要进入的view：
+    # 从右下角拖拽一个UIViewController到canvas中；
+    # 选择第一个scene中的table cell，ctrl+拖拽到新添加的view中，会自动创建一个segue，同时新添加的view controller也有了navigation bar/item；
+    # 在其上添加需要的控件：2个UILabel，1个UIImageView，同时navigation bar也是一个控件是UINavigationItem类型；
+    # new一个新的class: StarViewController （父类为UIViewController），定义：
+      .h中，定义需要访问的控件为IBOutlet，同时定义一个变量用于保存该view需要的数据；
+          @interface StarViewController : UIViewController
+          @property (strong, nonatomic) IBOutlet UINavigationItem *bar;
+          @property (strong, nonatomic) IBOutlet UILabel *team;
+          @property (strong, nonatomic) IBOutlet UILabel *info;
+          @property (strong, nonatomic) IBOutlet UIImageView *img;
+          @property (strong, nonatomic) NSArray *star;
+          @end
+      .m中，在viewDidLoad中将数据设置到控件中：
+        - (void)viewDidLoad
+        {
+            [super viewDidLoad];
+            self.bar.title = [self.star objectAtIndex:0];
+            self.team.text = [self.star objectAtIndex:1];
+            self.info.text = [self.star objectAtIndex:2];
+            self.img.image = [UIImage imageNamed:[self.star objectAtIndex:3]];
+            
+        }
+      # 选择该scene的view controller，然后将其绑定到各个控件上。
+    
+    6）view transition中数据的传递（当table view中选择某个cell的时候跳转到第二个scene中）
+    需要在跳转之前将数据传递过去，方法 prepareForSegue 在segue/transition之前会被调用；
+    在table view的类：StarsTableViewController 中添加：
+      - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+      {
+          //在发生segue transition的时候，数据的传递。
+          if ([[segue identifier] isEqualToString:@"showDetail"])
+          {
+              StarViewController *detail = [segue destinationViewController];
+              NSIndexPath *i = [self.tableView indexPathForSelectedRow];
+              NSArray *the = [self.stars objectAtIndex:[i row]];
+              detail.star = [[NSArray alloc] initWithObjects:[the objectAtIndex:0], [the objectAtIndex:2], [the objectAtIndex:3], [the objectAtIndex:1], nil];
+          }
+      }
+      注意需要提前选择scene1到scene2跳转的segue，将其identifier设置为“showDetail”
+ 
+  # 实例极其参考：
+    https://github.com/minjhe/iphone-code/tree/master/topics/Navigation
+    http://www.techotopia.com/index.php/Implementing_TableView_Navigation_using_Xcode_Storyboards
+ 
+
+> 不使用SB来创建navigation的应用
+  # 使用SB可以方便地创建有navigation功能的app；本节介绍如何不使用sb来实现，从而可以更方便地了解navigation如何工作的
+  # navigation app的特点：
+    此类程序一般包括一个navigation bar(UINavigationBar)和一个table views(UITableView)。
+    当选择table view中的一行之后，进入到detail的页面，同时在navigation bar上有显示back按钮。
+  # 具体如何实现：
+    UINavigationController是实现此类app的关键；
+    navigation管理的多个view，每个view有对应的view controller；
+    navigation可以管理view controller的push和pop （内部包含stack结构）；
+    同时UINavigationController自己包含了navigation bar和back button等；
+  # 实例：不使用SB创建一个navigation的应用：
+  1) 创建一个Project:
+     empty application
+     不使用core data
+     使用ARC
+     完成之后的project只包含了2个delegate的文件；
+  2）创建第一个screen的view:
+     第一个view是一个table view，所有我们需要选择父类为UITableViewController；
+     New一个class: TVTableViewController，选择父类为UITableViewController，并选择创建一个xib文件；
+    
+  3) 创建第二个screen的view:
+     第二个view也是一个table view；
+     New一个class: DetailsTVTableViewController，选择父类为UITableViewController，并选择创建一个xib文件；
+    
+  4）在app delegate中，创建navigation controller，让它指向第一个view的controller:
+    .h
+        @class TVTableViewController;
+        @interface NavAppDelegate : UIResponder <UIApplicationDelegate>       
+        @property (strong, nonatomic) UIWindow *window;
+        @property (strong, nonatomic) UINavigationController *navigationController;
+        @end
+    .m
+        - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+        {
+            //创建view controller
+            UIViewController *rootController = [[TVTableViewController alloc] initWithNibName:@"TVTableViewController" bundle:nil];
+           
+            //将其赋值给navigation controller
+            navigationController = [[UINavigationController alloc] initWithRootViewController:rootController];
+           
+            self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+            [self.window addSubview:navigationController.view];
+            [self.window makeKeyAndVisible];
+            return YES;
+           
+            /*
+            self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+            // Override point for customization after application launch.
+            self.window.backgroundColor = [UIColor whiteColor];
+            [self.window makeKeyAndVisible];
+            return YES;
+            */
+        }
+       
+    5) 实现TVTableViewController:
+   
+    .h
+        @class DetailsTVTableViewController;
+        @interface TVTableViewController : UITableViewController
+        @property (strong, nonatomic) NSArray *data;
+        @property (strong, nonatomic) IBOutlet DetailsTVTableViewController *detailsController;
+        @end
+    .m
+        在初始化的时候设置其数据
+        - (void)viewDidLoad
+        {
+            [super viewDidLoad];
+       
+            //初始化data
+            NSArray *p1 = [[NSArray alloc] initWithObjects:@"Search Engine", @"Google", @"Bing", @"Yahoo", nil];
+            NSArray *p2 = [[NSArray alloc] initWithObjects:@"SNS", @"Facebook", @"Yahoo", @"Twitter", nil];
+            NSArray *p3 = [[NSArray alloc] initWithObjects:@"Mobile", @"Apple", @"Motorola", @"Samsung", nil];
+            self.data = [[NSArray alloc] initWithObjects:p1, p2, p3, nil];
+            self.title = @"Internet Companies";
+           
+        }
+        实现各个cell的数据load
+        - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+        {
+        #warning Potentially incomplete method implementation.
+            // Return the number of sections.
+            return 1;
+        }
+       
+        - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+        {
+        #warning Incomplete method implementation.
+            // Return the number of rows in the section.
+            return [self.data count];
+        }
+       
+        - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+        {
+            static NSString *CellIdentifier = @"Cell";
+           
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+            if (cell == nil) {
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+            }
+           
+            // Configure the cell...
+            NSArray *the = [self.data objectAtIndex:[indexPath row]];
+            cell.textLabel.text = [the objectAtIndex:0];
+           
+            return cell;
+        }
+       
+        //该方法在选择某个cell的时候被调用，在这里设置detailsController中的数据；
+        - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+        {           
+            //跳转之前初始化detail controller的data (detailsData)
+            NSArray *the = [self.data objectAtIndex:[indexPath row]];
+           
+            self.detailsController.title = [the objectAtIndex:0];
+            self.detailsController.detailsData = [[NSMutableArray alloc] init];
+            for (int i = 1; i < [the count]; i++)
+            {
+                [self.detailsController.detailsData addObject:[the objectAtIndex:i]];
+            }
+           
+            [self.navigationController pushViewController:detailsController animated:YES];
+           
+        }
+       
+     在TVTableViewController的xib上拖拽一个UIViewController，然后在xib上选择File's Owner，将其outlet的detailsController拖拽到添加的UIViewController；
+    
+   6）实现DetailsTableViewController:
+   .h
+        @interface DetailsTVTableViewController : UITableViewController
+        @property (strong, nonatomic) NSMutableArray *detailsData;
+        @end
+    .m
+        - (void)viewDidAppear:(BOOL)animated
+        {
+            [super viewDidAppear:animated];
+            //需要重新load一下data，否则data变化了，但是界面没更新
+            [self.tableView reloadData];
+        }
+        - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+        {
+        #warning Potentially incomplete method implementation.
+            // Return the number of sections.
+            return 1;
+        }
+       
+        - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+        {
+        #warning Incomplete method implementation.
+            // Return the number of rows in the section.
+            return [self.detailsData count];
+        }
+       
+        - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+        {
+            static NSString *CellIdentifier = @"Cell";
+           
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+            if (cell == nil) {
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+            }
+           
+            // Configure the cell...
+            cell.textLabel.text = [self.detailsData objectAtIndex:[indexPath row]];
+           
+            return cell;
+        }
+  # 实例和参考：
+  https://github.com/minjhe/iphone-code/tree/master/topics/NavigationNoSB
+  http://www.techotopia.com/index.php/Creating_a_Navigation_based_iOS_5_iPhone_Application_using_TableViews

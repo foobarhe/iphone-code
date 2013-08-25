@@ -1,0 +1,101 @@
+ios topic: location
+> location:
+# 有多种方法可以获取Location: GPS, cell tower, and IP address of WIFI;
+准确性越来越低；
+# ios sdk提供了location的api，developer只需要使用统一的接口即可；
+> core location framework:
+相关的类：CLLocationManager, CLLocation;
+1）location manager: CLLocationManager
+# location manager的创建：
+CLLocationManager *locationMgr = [[CLLocationManager alloc] init];
+locationMgr.desiredAccuracy = kCLLocationAccuracyBest;
+locationMgr.delegate = self;
+[locationMgr startUpdatingLocation];
+# 每当location update的时候，delegate的方法：
+didUpdateToLocation
+会被调用，当前的location会作为参数传递；
+# location的accuracy准确性：
+通过设置location manager的desiredAccuracy属性，可以使用的值为：
+kCLLocationAccurarcyBestForNavigation
+kCLLocationAccurarcyBest
+kCLLocationAccurarcyNearestTenMeters
+kCLLocationAccurarcyHundredMeters
+kCLLocationAccurarcyKilometer
+kCLLocationAccurarcyThreeKilometers
+各种等级不一样，等级越高越费电；
+# distance filter：
+默认的location manager，每当location发生变化都会report updates;
+其属性 distanceFilter 可以设置：
+locationMgr.distanceFilter = 1500.0f; //设置发生1500以上的变化才report updates;
+设置取消distance filter:
+locaitonMgr.distanceFilter = kCLDistanceFilterNone;
+# location manager实现 CLLocationManagerDelegate protocol
+如上的2个delegate methods:
+-(void)locationManager:(CLLocationManager *)manager
+didUpdateToLocation:(CLLocation *)newLocation
+{
+//handle location updates
+}
+-(void)locationManager:(CCLocationManager *)manager
+didFailWithError:(NSError *)error
+{
+//handle error 
+}
+2) location: CLLocation
+location的信息保持在 CLLocation 对象中。
+包含如下data:
+latitude
+longitude
+horizontal accuracy
+altitude
+altitude accuracy
+# 获取latitude和longitude信息
+CLLocationDegrees currentLat = location.coordinate.latitude;
+CLLocationDegrees currentLong = location.coordinate.longitude;
+# 获取horizontal和vertical accuracy
+CLLocation verticalAccuracy = location.verticalAccuracy;
+CLLocation horizontalAccuracy = location.horizontalAccuracy;
+# altitude海拔
+CLLocation altitude = location.altitude;
+# 计算distances:
+CLLocationDistance distance = [newLocation distanceFromLocation:oldLocation];
+> location 和 multitasking
+之前我们介绍过，location是一种允许在background运行的3种情况之一。
+当app进入background的时候，调用方法：
+applicationDidEnterBackground
+这个时候要先调用location manager的如下方法：
+startMonitoringSignificantLocationChanges
+这样确保只有发生significant的changes的时候才会reports update。
+从而节省battery。
+参考：
+http://www.techotopia.com/index.php/Getting_iPhone_Location_Information_using_the_iOS_5_Core_Location_Framework
+> 实例：
+1) 创建single view application: 不使用SB，使用ARC;
+2) 添加 CoreLocation.framework到project中：
+选择project，选择Build Phases的Link Binary With Libraries中添加该framework；
+3）设计UI和拖拽；
+4) 各种方法的实现；
+代码参看：
+https://github.com/minjhe/iphone-code/tree/master/topics/Location
+http://www.techotopia.com/index.php/An_Example_iOS_5_iPhone_Location_Application
+location的app最好在physical device上测试。
+ios dev: map/MapKit
+> 如上介绍了如何获取location信息；
+ # 实际开发中需要将Location信息以map的形式展现出来；
+   MapKit framework提供了和map相关的一些api；
+   主要是MKMapView这个类，它继承自UIView，可以用于显示maps；
+ # 另外，如果app实现了接口 MKMapViewDelegate 并实现其方法；
+   可以接受location改变的notification。
+   
+ > 实例：
+  1）创建project: single view application，不使用SB，使用ARC;
+  2) 在Project中选择build phases，在link binary with libraries中添加 MapKit.framework包；
+  3）创建UI，并绑定（添加 MKMapView 和 UIToolBar）
+    添加了UIToolBar之后删除其默认的Item；
+    拖拽绑定；
+  4）实现各个代码：
+   在viewDidLoad方法为toolbar添加item，同时设置mapView使用user location；
+  注意：这里使用了动态的方法添加Item，及其绑定events的callback；其实可以在xib中静态地添加； 
+ > 参考：
+   https://github.com/minjhe/iphone-code/tree/master/ios/Map
+   http://www.techotopia.com/index.php/Working_with_Maps_on_the_iPhone_with_MapKit_and_the_MKMapView_Class

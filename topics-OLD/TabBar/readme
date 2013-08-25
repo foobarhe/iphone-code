@@ -1,0 +1,49 @@
+ios topic: tab bar
+
+> tab bar:
+  # 使用tab bar的app非常常见。
+    使用storyboard可以方便地创建tab bar based的app。
+  # xcode（UIKit）提供的tab bar相关的view和view controller:
+    1) view: UITabBar/UITabBarItem
+    2) view controller: UITabBarViewController
+  # 界面对应的view和view controller:
+    1) tab bar本身包含：
+      view为：UITabBar
+      view controller为：UITabBarViewController
+    2) 每个item包含（每个item对应一个view）：
+      view为：UIView, UITabBarItem;
+      view controller为：UIViewController的子类；
+
+
+> 方法1：创建tab bar based的多view app（在single view app基础上的方法）:
+  # 创建一个single view application的project: Tab。选择use storyboard和use automatic reference counting；
+  # 在sb中添加各个views:
+    1) 选择storyboard，这个第一个view，可以把它看做是tab view中的第一个tab；
+    2) 选择该view，并选择Editor->Embed In->Tab Bar Controller，会创建一个tab bar在canvas上，并使用刚才的view作为该tab的第一个item；
+    3）在object library中选择一个或多个view controller添加到canvas上；
+    4）对每个view，先选择tab bar的view，然后Ctrl+拖拽到各个view，选择Relationship-viewControllers，这样相当于把该view添加为tab的另外的item；
+    5）在各个view上添加需要的控件，还可以修改view的background等等；可以修改tab的名字和图标；
+    此时如果build并run的话，整个tab view是可以工作的。
+  # 为每个view添加view controller的class，从而可以在代码中实现各个view上的逻辑outlets和actions：
+    1) 右键选择project，选择new file，创建UIViewController为父类的各个view controller的类，例如：Tab2ViewController， Tab3ViewController等；
+      创建single view project默认生成的view controller可以看做是tab view的第一个tab的view controller；
+    2）还需要对tab bar的本身创建一个view controller的class，例如：TabBarViewController。
+    2）然后分别选择各个view，然后在Identity Inspector中的Class选择定义的响应的view controller的class；
+    3）在各个view controller的class中添加outlets和actions；
+
+
+> 方法2：（推荐方法）创建tab bar based的多view app（直接选择Tabbed Application）:
+  # new project，选择Tabbed Application，选择使用Storyboard，使用ARC；
+  # 成功之后自动生成如上方法创建的所有文件，例如：
+    自动创建了2个view，以及其view controller。
+  # 可以添加更多的items: 从右下角拖拽一个或多个view controller到canvas上；
+    然后对每个view controller，先选择tab bar的view，然后Ctrl+拖拽到各个view，选择Relationship-viewControllers，这样相当于把该view添加为tab的另外的item；
+    为每个增加的item view，定义view controller class (继承自UIViewController)，并设置各个view的class为创建的类。
+  # 可以在各个view上添加controls等控件，并在view controller中定义IBOutlet和IBAction，绑定事件响应等。
+
+
+> 实例：
+  https://github.com/minjhe/iphone-code/tree/master/topics/TabBar
+
+> 更多参考：
+  http://www.techotopia.com/index.php/Using_Xcode_Storyboards_to_create_an_iOS_5_iPhone_Tab_Bar_Application

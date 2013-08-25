@@ -1,0 +1,246 @@
+ios topic: table views
+
+> table views:
+  # table view由一系列的cell组成，可以是static或dynamic的。（mail和settings等都使用该种pattern）。
+    static的：固定rows的table，例如settings，cell可以不同；
+    dynamic：cell是runtime生成的；
+  # xcode（UIkit)提供的table相关的view和view controller:
+    1) view:
+      UITableView
+      UITableViewCell
+      UITableViewDataSource protocol: 用于控制为table view提供数据的对象；
+      UITableViewDelegate protocol: 提供detecting对table view上作用的对象；
+    2) view controller:
+      UITableViewController
+  # 注意：如果拖拽一个UITableViewController到storyboard canvas：
+    它其实包含了一个UITableView和UITableViewCell(prototype cell)
+    还需要new一个新的view controller：FooTableViewController, 选择其父类为UITableViewController；
+    然后选择刚才拖拽的view controller，选择其class为刚创建FooTableViewController。
+  # table view的style: grouped style（sections）, plain style；
+  # table view cell的style:
+    UITableViewCellStyleDefault
+    UITableViewCellStyleSubtitle
+    UITableViewCellStyleValue1
+    UITableViewCellStyleValue2
+  # 参考：http://www.techotopia.com/index.php/An_Overview_of_iOS_5_Table_Views_and_Xcode_Storyboards
+
+
+> 编写dynamic table view:
+  # 创建一个project: TableView
+    single view application
+    use storyboard
+    等
+  # 删除不需要的自动创建的文件和UI：
+    我们需要一个UITableViewController，而且包含UITableView和UITableViewCell。
+    storyboard中默认生成的是：UIView，而且view controller为自动创建的：*ViewController.h, *ViewController.m
+    它继承自UIViewController，并不是我们想要的；
+    1）删除*ViewController.h和*ViewController.m；
+    2) 删除storyboard上默认生成的scene；
+  # 在storybard上重新设计UI：
+    1) 从右下角object library中拖拽一个UITableViewController到canvas上
+      它自动包含UI：UITableView和UITableViewCell（是一个prototype cell，即单个元素的模板，定义好它之后，其他cell迭代）;
+    2) 对prototype cells上添加需要的控件，例如：
+      添加一个UIImageView和2个UILabel；
+  # 为该table view创建一个自定义的view controller (继承自UITableViewController）:
+    在project上选择new file，创建NBATableViewController，选择父类为UITableViewController（不选择targetd for ipad，不选择with XIB）;
+    选择sb上的table view的橘红色的元素按钮（其对应的view controller），在class中选择NBATableViewController；
+  # 为prototype cell创建一个自定义的类（继承自UITableViewCell）:
+    (这里没有创建view controller，而是创建一个继承自UITableViewCell的子的view的类，用于设置cell中的内容)。
+    在project上选择new file，创建NBATableViewCell，选择父类为UITableViewCell;
+    选择sb的scene上选择Table View Cell，右侧在class中选择NBATableViewCell；
+    这个类，主要用于方便访问table cell上各个控件的值。
+  # 为prototype cell指定一个identifier（在右侧attributes的insepector），例如：nbaTableCell
+  # 修改prototype cell的view: NBATableViewCell
+    .h
+        @interface NBATableViewCell : UITableViewCell
+        @property (strong, nonatomic) IBOutlet UIImageView *pImg;
+        @property (strong, nonatomic) IBOutlet UILabel *pTeam;
+        @property (strong, nonatomic) IBOutlet UILabel *pInfo;
+        @end
+    .m
+        @implementation NBATableViewCell
+        @synthesize pImg, pTeam, pInfo;
+    绑定outlets，右键点击prototype cell的白色部分，将pImg, pTeam, pInfo等绑定到cell上的3个控件上。
+  # 修改table view的view controller: NBATableViewController
+    .h
+        @interface NBATableViewController : UITableViewController
+        @property (strong, nonatomic) NSArray *data;  //注意这里没有声明为IBOutlet，这里data仅仅是普通的属性property
+        @end
+    .m
+    
+        #import "NBAViewController.h"
+        #import "NBATableViewCell.h"    //需要import table cell的类定义
+        …
+        @implementation NBATableViewController
+        @synthesize data;   //data用于保存view controller的数据
+        …
+        由于table view是dynamic的，我们需要定义data source，这里我们使用自定义的数组：
+        - (void)viewDidLoad
+        {
+            [super viewDidLoad];
+            
+            //初始化data的数据
+            NSArray *p1 = [[NSArray alloc] initWithObjects:@"kobe.jpg", @"湖人", @"后卫, 1.98", nil];
+            NSArray *p2 = [[NSArray alloc] initWithObjects:@"james.jpg", @"热队", @"前锋, 2.03", nil];
+            NSArray *p3 = [[NSArray alloc] initWithObjects:@"wade.jpg", @"热队", @"后卫, 1.93", nil];
+            NSArray *p4 = [[NSArray alloc] initWithObjects:@"howard.jpg", @"魔术队", @"中锋, 2.11", nil];
+            NSArray *p5 = [[NSArray alloc] initWithObjects:@"durant.jpg", @"雷霆队", @"前锋, 2.06", nil];
+            NSArray *p6 = [[NSArray alloc] initWithObjects:@"paul.jpg", @"快船队", @"后卫, 1.83", nil];
+            NSArray *p7 = [[NSArray alloc] initWithObjects:@"griffin.jpg", @"快船队", @"前锋, 2.08", nil];
+            self.data = [[NSArray alloc] initWithObjects: p1, p2, p3, p4, p5, p6, p7, nil];
+        }
+        寻找#pragma mark - Table view data source，在下面修改几个方法：
+        - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+        {
+        #warning Potentially incomplete method implementation.
+            // 返回table view共包含多少个section
+            return 1;
+        }
+        
+        - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+        {
+        #warning Incomplete method implementation.
+            // 返回每个section共包含多少个rows
+            return [self.data count];
+        }
+        
+        - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+        {
+            // 该方法会在table view显示的时候自动被调用，它的输入为table view和要显示的行row的index；
+            // 需要返回一个 UITableViewCell 的对象，共view controller显示
+            
+            //如下语句表示，使用nbaTableCell的prototype cell（模板）创建一个table cell
+            static NSString *CellIdentifier = @"nbaTableCell";
+            NBATableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+            
+            //设置这个table cell各个属性的值，它们已经在NBATableViewCell中绑定了UI的控件，因此可以更新控件的内容；
+            cell.pTeam.text = [[self.data objectAtIndex:[indexPath row]] objectAtIndex:1];
+            cell.pInfo.text = [[self.data objectAtIndex:[indexPath row]] objectAtIndex:2];
+            UIImage *img = [UIImage imageNamed:[[self.data objectAtIndex:[indexPath row]] objectAtIndex:0]];
+            cell.pImg.image = img;
+            
+            return cell;
+        }
+    # 可以将下载的图片，拖拽到project的Supporting Files下。
+    # 源代码及参考：
+      https://github.com/minjhe/iphone-code/tree/master/topics/TableViewDynamic
+      http://www.techotopia.com/index.php/Using_Xcode_Storyboards_to_Build_Dynamic_TableViews_with_Prototype_Table_View_Cells
+
+
+> 编写静态table view
+# static table view:
+  static的table view和动态的table view不同，后者需要data source，每个cell的样式是一样的。
+  static的table view每个cell的内容可以是不一样的，例如ios中的settings。
+ 
+# 创建一个static table view的app：
+ 1）创建single view的project，选择：使用storyboard和ARC；
+ 2）删除自动创建的*ViewController.h和*ViewController.m文件，他们是UIViewController为父类，我们不需要；
+    删除storyboard的默认的view和view controller；
+ 3）添加新的UI:
+    从Object library中拖拽Table View Controller(UITableViewController)到canvas上，默认的是dynamic的（包含prototype cell和prototype content等）；
+    选择Table View Controller下的Table View，在右侧attributes inspector中，设置：
+        content: static cells //不适用dynamic prototypes;
+        sections: 2
+        style: grouped //而不是plain；
+    继续打开Table View下的2个Table View Section：设置其cell的个数，并修改Header分别为Player Details和Player Photo；
+    在第一个section上添加：4个label，在第二个section上添加：1个UIImageView；
+ 4) 为Table View添加一个view controller:
+    右键选择project->new file，创建一个新的类TVSTableViewController，其父类为UITableViewController；
+    成功之后，在storyboard中选择黄色（即当前table view的view controller)，在右侧将其class改为TVSTableViewController（其默认使用的是UITableViewController）；
+ 5) 修改TVSTableViewController:
+    .h
+        @interface STViewController : UITableViewController
+        @property (strong, nonatomic) IBOutlet UILabel *name;
+        @property (strong, nonatomic) IBOutlet UILabel *info;
+        @property (strong, nonatomic) IBOutlet UIImageView *img;
+        @end
+    .m
+      @implementation TVSTableViewController
+      @synthesize name, info, img;
+      ..
+      //初始化的时候直接设置数据
+      - (void)viewDidLoad
+      {
+          [super viewDidLoad];
+          //设置控件的数据
+          self.name.text = @"Kobe Bryant";
+          self.info.text = @"洛杉矶湖人队，后卫，1.98米";
+          self.img.image = [UIImage imageNamed:@"kobe.jpg"];
+      }
+      #pragma mark - Table view data source
+      //删除此部分的代码，这个是data source的部分，如果不删除，不会load静态的数据
+      #pragma mark - Table view delegate
+   
+    同时拷贝图片到Supporting files中。
+   
+  实例参考：
+    https://github.com/minjhe/iphone-code/tree/master/topics/TableViewStatic
+    http://www.techotopia.com/index.php/Using_an_Xcode_Storyboard_to_Create_a_Static_Table_View
+
+
+> 不使用storyboard创建table view
+  可以不使用storyboard，直接来构建table view
+  # 创建一个project:
+    single view application
+    不使用storyboard
+    使用ARC
+    ...
+  # 打开xib文件编辑界面
+    拖拽UITableView到canvas上；
+  # 选择UITableView，右侧的connection inspector中，拖拽dataSource和delegate到File's Owner；
+  # 为了使得自动产生的view controller (UIViewController是其父类)，它需要实现2个接口：
+    UITableViewDelegate，UITableViewDataSource
+  # 修改代码：
+  .h:
+    @interface TVViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+    @property (strong, nonatomic) NSArray *data;
+    @end
+  .m:
+    在viewDidLoad中初始化数据：
+    - (void)viewDidLoad
+    {
+        [super viewDidLoad];
+            // Do any additional setup after loading the view, typically from a nib.
+       
+        //初始化data
+        NSArray *p1 = [[NSArray alloc] initWithObjects:@"kobe.jpg", @"Kobe", @"Lakers", nil];
+        NSArray *p2 = [[NSArray alloc] initWithObjects:@"james.jpg", @"James", @"热队", nil];
+        NSArray *p3 = [[NSArray alloc] initWithObjects:@"howard.jpg", @"Howard", @"魔术队", nil];
+        NSArray *p4 = [[NSArray alloc] initWithObjects:@"paul.jpg", @"Paul", @"快船队", nil];
+       
+        self.data = [[NSArray alloc] initWithObjects: p1, p2, p3, p4, nil];
+    }
+    //实现UITableViewDataSource protocol的2个方法
+    - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+    {
+        return [self.data count];
+    }
+   
+    - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+    {
+        //创建一个cell identifier
+        static NSString *cellIdentifier = @"Cell";
+       
+        //try to reuse an existing cell that may have scrolled off the screen
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+       
+        //if no previous cell available, create a new one using UITableViewCellStyleDefault
+        if (cell == nil)
+        {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        }
+       
+        NSArray *the = [self.data objectAtIndex:[indexPath row]];
+       
+        //NSLog(@"%@, %@, %@", [the objectAtIndex:0], [the objectAtIndex:1], [the objectAtIndex:2]);   
+   
+        //动态地设置cell的内容
+        cell.imageView.image = [UIImage imageNamed:[the objectAtIndex:0]];
+        cell.textLabel.text = [the objectAtIndex:1];
+        cell.detailTextLabel.text = [the objectAtIndex:2];
+       
+        return cell;
+    }
+# 代码实例：
+   https://github.com/minjhe/iphone-code/tree/master/topics/TableViewNoSB
+   http://www.techotopia.com/index.php/Creating_a_Simple_iOS_5_iPhone_Table_View_Application

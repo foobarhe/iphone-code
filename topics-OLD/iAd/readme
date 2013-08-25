@@ -1,0 +1,29 @@
+ios topic: iAds
+> iAds:
+  # iAds历史：
+    在ios之前，刚开始针对mobile的ads: AdMob（针对各种平台提供SDK，方便开发者嵌入ads);
+    AdMob之后被Google收购；
+    之后Apple收购了Quattro Wireless（当时已经有一些premium companies)，之后进化为iAds；
+  # iAds的格式：
+    1) banner ads: 对应的class为ADBannerView class
+    2) full screen ads (interstitial): 对应的class为ADInterstitialView class
+  # iAds工作的方法：
+    在app中嵌入了代码之后，需要从apple的ads inventory中获取广告并显示。
+    如果没有合适的或网络不通，则显示为空白；
+    有些ads可以直接显示不能交互，有些可以交互，有些交互的过程中会把app放置到后端；
+    另外sdk可以统计广告的显示等。
+ > 实例：
+  1）创建single view application，不使用SB，使用ARC；
+  2）选择project使用iAds framework:
+    选择project，选择Build Phases，在Link Binary With Libraries的部分，添加iAd.Framework。
+  3）在xib上设计界面：添加table view和ad
+  4）更新代码；
+    在viewDidLoad中，创建banner view的对象；
+    然后需要实现ADBannerViewDelegate的几个方法：
+      -(void)bannerViewDidLoadAd:(ADBannerView *)banner;
+      -(BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave;
+      -(void)bannerViewActionDidFinish:(ADBannerView *)banner
+      - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error;
+> 参考：
+   https://github.com/minjhe/iphone-code/tree/master/topics/iAd
+   http://www.techotopia.com/index.php/Integrating_iAds_into_an_iOS_5_iPhone_App

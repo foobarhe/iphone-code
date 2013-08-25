@@ -1,0 +1,104 @@
+ios topic: UIPickerView, UIDatePicker
+> 如上2种UI，方便用户在一系列的选项中进行选择；
+  UIDatePicker: ios提供的用于选择date和time的UI控件；
+  UIPickerView: 是general的控件，可以进行customer，方便在一系列值中进行选择；
+> UIDatePicker使用实例：
+  # 创建project:
+    Single View Application，不使用SB，使用ARC；
+  # 在xib上添加 UIDatePicker, UILable，和一个button；
+  # 定义button事件的callback:
+    -(IBAction)getSelection:(id)sender
+    {
+        //获取locale
+        NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+    
+        //获取日期，并获取其字符串
+        NSDate *date = [datePicker date];
+        NSString *str = [[NSString alloc] initWithFormat:@"%@", [date descriptionWithLocale:locale]];
+        
+        lbl.text = str;
+    }
+   # 拖拽绑定：IBOutlet，IBAction（button的TouchUpInside的事件绑定）；
+  代码实例：
+    https://github.com/minjhe/iphone-code/tree/master/topics/DatePicker
+  参考：
+  http://www.techotopia.com/index.php/Using_the_iPhone_iOS_5_UIPickerView_and_UIDatePicker_Components
+> UIPickerView: 自定义picker
+  # UIPickerView需要扮演delegate和data source的角色，需要实现如下几个方法：
+    numberOfComponentsInPickerView: 确定picker中有几个wheels；
+    numberOfRowsInComponent: 每个component中有几个选项；
+    titleForRow: 每行的title；
+  # 实例：
+  1) 创建一个single view project，不使用SB，使用ARC；
+  2) 在xib上创建UI：
+    UITextField, UIPickerView, UILabel;
+  3) 定义PVViewController实现2个接口，以及其属性：
+  .h
+     #import <UIKit/UIKit.h>
+    @interface PVViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
+    
+    @property (strong, nonatomic) IBOutlet UITextField *src;
+    @property (strong, nonatomic) IBOutlet UIPickerView *picker;
+    @property (strong, nonatomic) IBOutlet UILabel *res;
+    
+    @property (strong, nonatomic) NSArray *countries;
+    @property (strong, nonatomic) NSArray *exchangeRates;
+    -(IBAction)textFieldReturn:(id)sender;
+    
+    @end
+  .m
+    在viewDidLoad中初始化data:
+    - (void)viewDidLoad
+    {
+        [super viewDidLoad];
+            // Do any additional setup after loading the view, typically from a nib.
+        
+        //初始化data
+        self.countries = [[NSArray alloc] initWithObjects: @"Australia (AUD)", @"China (CNY)", @"France (EUR)", @"Great Britain (GBP)", @"Japan (JPY)", nil];
+        self.exchangeRates = [[NSArray alloc]
+                              initWithObjects: [NSNumber numberWithFloat:0.9922],
+                              [NSNumber numberWithFloat:6.5938],
+                              [NSNumber numberWithFloat:0.7270],
+                              [NSNumber numberWithFloat:0.6206],
+                              [NSNumber numberWithFloat:81.57], nil];
+    }
+    
+    hide keyboar的方法的实现：
+    //hide keyboard的callback
+    -(IBAction)textFieldReturn:(id)sender
+    {
+        [self resignFirstResponder];
+    }
+    
+    //实现data source protocol的接口
+    - (NSInteger)numberOfComponentsInPickerView: (UIPickerView *)pickerView
+    {
+        return 1;
+    }
+    - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+    {
+        return [countries count];
+    }
+    - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+    {
+        return [countries objectAtIndex:row];
+    }
+    
+    //实现delegate protocol的方法
+    -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+    {
+        float rate = [[exchangeRates objectAtIndex:row] floatValue];
+        float dollars = [src.text floatValue];
+        float result = dollars * rate;
+        
+        NSString *str = [[NSString alloc] initWithFormat: @"%.2f USD = %.2f %@", dollars, result, [countries objectAtIndex:row]];
+        res.text = str;
+    }
+   4) outlet和action的绑定：
+    从File's Owner，ctrl+拖拽到3个IBOutlet；
+    将text field的Did End On Exit绑定到textFieldReturn，隐藏键盘；
+    另外注意，picker view的dataSource和delegate需要ctrl+拖拽到File's Owner；
+    
+# 实例参考：
+  https://github.com/minjhe/iphone-code/tree/master/topics/PickerView
+  http://www.techotopia.com/index.php/An_iOS_5_iPhone_UIPickerView_Example

@@ -1,0 +1,35 @@
+ios topic: audio
+> audio的播放：
+ # 使用 AV Foundation Framework提供的类：
+  AVAudioPlayer
+  AVAudioRecorder
+ # 支持的audio format:
+  AAC, ALAC, AMR, HE-AAC, iLBC, Mp3等；
+> app实现 AVAudioPlayerDelegate 接口，继而可以为一些event添加callback:
+ # audioPlayerDidFinishPlaying //called when the audio playback finishes;
+ # audioPlayerDecodeErrorDidOccur //called when a decoding error is met;
+ # audioPlayerBeginInterruption //called when audio has been interrupted;
+ # audioPlayerEndInterruption //called after an interruption ends;
+> AVAudioPlayer类的对象的属性：
+ playAtTime方法设置to be delayed to begin at a later time;
+ currentTime属性获取length of the current audio playback;
+ numberofLoops等；
+> 实例：
+ 1）创建一个single view application, 不使用SB，使用ARC；
+ 2）在project的build phases的link binary with libraries中添加：AVFoundation.framework
+ 3) 将audio file添加都project resource中(supporiting files);
+ 4) 设计UI，添加控件，编写代码：
+ 具体参看：
+https://github.com/minjhe/iphone-code/tree/master/topics/AudioPlay
+http://www.techotopia.com/index.php/Playing_Audio_on_an_iPhone_using_AVAudioPlayer
+> audio的record录音
+ # 使用class: AVAudioRecorder
+   可以对其对象进行各种属性和方法的设定；
+   另外其可以实现接口：AVAudioRecorderDelegate，从而可以对某些event进行callback等；
+ # 实例：
+  1) 创建single view application, 不使用SB，使用ARC；
+  2）在project的build phases的link binary with libraries中添加：AVFoundation.framework
+  3) 设计UI，添加控件，编写代码；
+ 具体参看：
+ https://github.com/minjhe/iphone-code/tree/master/topics/AudioRecord
+ http://www.techotopia.com/index.php/Recording_Audio_on_an_iPhone_with_AVAudioRecorder

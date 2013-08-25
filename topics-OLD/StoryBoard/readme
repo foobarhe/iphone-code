@@ -1,0 +1,80 @@
+ios topic: storyboard (将代替xib/nib)
+
+> storyboard
+  # 我们知道编写app的步骤为：
+    修改xib文件构建ui;
+    修改view controller;
+    绑定；
+  如上对单view的应用很方便，但是遇到多view则比较麻烦。
+
+  # 从xcode 4.2开始提供storyboard的方法，可以逐步地代替xib。
+    storyboard使得多view/view controller的UI更加方便。
+    它支持单view，可以完全代替xib；
+    方便地添加view/view controller，以及定义view之间transition的效果等；
+    一般app使用一个storyboard即可，在build的时候，xcode会自动对storyboard文件进行拆分，从而在必要的时候解析必要的部分，提供性能。
+
+  # 在xcode中创建project，选择使用storyboard，它默认会包含一个初始的view和view controller；
+  # storyboard方便管理多view的app，每个view叫做一个scene。
+    一个scene一般对应一个view controller（但是注意：多个view可以共享一个view controller）；
+    和xib文件一样，可以在view(scene)和view controller上进行IBOutlet和IBAction的绑定；
+  # 当需要多个view的时候：
+    可以从右下角拖拽一个view controller到storyboard canvas上（其实包含了一个view (UIView)和一个view controller(默认使用UIViewController)）；
+    可以在view上添加各种UI元素；
+    往往还需要添加一个view controller的class，选择其继承于UIViewController，然后选择添加的scene的view controller的class为自定义的view controller的类（多个view可以共享一个view controller，设置其使用的class为指定的view controller的class即可）；
+    将view中的元素和view controller的IBOutlet和IBAction进行绑定；
+  # 多个scene之间的transition: segue。
+    segue对应一个obj，可以inteface builder中configure或者在代码中操作。
+  # 参考：
+    http://developer.apple.com/library/ios/#releasenotes/General/WhatsNewIniPhoneOS/Articles/iOS5.html#//apple_ref/doc/uid/TP30915195-SW5
+
+
+> 使用storyboard
+  # 创建project，使用 Single View Application，并选择使用storyboard。
+  # 点击*.storyboard，在第一个view中添加
+    label: scene1
+    button: go to scene2
+  # 在Object library中选择一个view controller object，拖拽到canvas上（添加了一个view，并默认使用UIViewController类）
+    在view上添加：
+    label: scene2
+    button: go to scene1
+  # 设置各个view之间的transition，也称为segue：
+    选择button: go to scene2，Ctrl+拖拽到view2，选择Modal menu;
+    选择button: go to scene1，Ctrl+拖拽到view1，选择Modal menu;
+  # 为各个segue，选择transition:
+    选择segue, 在Attributes Inspector中选择使用的transition；
+  # 如上其实有了2个views：
+    第一个view是默认的，它的view controller是xcode自己创建的SBViewController；
+    第二个view，还需要为其创建一个view controller：
+    右键选择project，然后选择new file，选择object-c file，设置新的类是 UIViewController类的子类；
+    不选择Target for iPad，不选择With XIB for user interface；
+    给该类一个名字：Scene2ViewController
+    然后选择第2个view，在Identity Inspector中，修改其Class为 UIViewController 为 Scene2ViewController
+  # 综上，运行app，会看到可以在2个view之间进行跳转。
+  # 代码实例：
+   https://github.com/minjhe/iphone-code/tree/master/topics/StoryBoard
+ 
+
+> 在code中控制storyboard segue的transition
+  # 有些情况下，在Interface Builder中无法实现一些transition，这个时候可以使用code实现。
+    例如当device被rotate为upside down的时候，从scene2 transition到scene1。
+  # 这个是通过view controller的方法:
+    performSegueWithIdentifier
+    来实现的。该方法需要一个参数：需要执行的transition的identifier。
+  # 在storyboard中拖拽生成的segue没有identifier，因此需要对其添加identifier。
+    选择某条segue，然后在attribute inspector中的identifier text中输入：Segue2To1
+  # 然后在scene2的view controller文件中实现。由于我们需要在rotation的时候调用该方法，因此需要在rotation的code中来实现：
+    -(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+      if (interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
+        [self performSegueWithIdentifier:@"Segue2To1" sender: self];
+      }
+      //只支持portrait的view
+      return (interfaceOrientation  == UIInterfaceOrientationPortrait);
+    }
+  # 另外，当segue/transition被执行的时候，会先调用view controller的一个方法：
+    prepareForSegue
+    因此如果需要在segue/transition执行之前执行一些动作，可以实现该方法，例如：
+    -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id) sender {
+      NSLog(@"Segue about to be performed");
+    }
+  # 参考：
+    http://www.techotopia.com/index.php/Using_Xcode_Storyboarding_%28iPhone_iOS_5%29

@@ -1,0 +1,119 @@
+ios topic: camera, photo
+> camera:
+ camera可以拍照和拍视频；
+ ios提供了类：UIImagePickerController，可以access to camera, photo library等；
+ 例如，可以使用camera拍摄照片和视频；可以使用该类访问library中的photo和video；
+> UIImagePickerController
+ # 创建了该类的对象，需要对其的一些属性进行一些设置；
+ # source的类型：sourceType，支持的值：
+   UIImagePickerControllerSourceTypeCamera
+   UIImagePickerControllerSourceTypeSavedPhotosAlbum
+   UIImagePickerControllerSourceTypePhotoLibrary
+ # 可以接受的media type: mediaType
+   例如video和images: KUTTypeImage，KUTTypeMovie
+   在<MobileCoreServices/MobileCoreServices.h>中定义
+ # 是否允许user编辑：allowsEditing
+ # 例如：
+   UIImagePickerController *imgPicker = [[UIImagePickerController alloc] init];
+   imgPicker.delegate = self;
+   imgPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+   imgPicker.mediaTypes = [NSArray arrayWithObjects:
+        (NSString *) kUTTypeImage,
+        (NSString *) kUTTypeMovie, nil];
+   imgPicker.allowsEditing = YES;
+   [self presentModalViewController:imgPicker animated:YES];
+  # 让某个obj能够对用户的action做出响应，即可以定义某些event的callback，都需要实现一些delegate接口；
+  通常的做法是，直接将view controller作为该UIImagePickerController的delegate属性；
+  然后对view controller实现接口 UIImagePickerControllerDelegate 和 UINavigationControllerDelegate。
+  并实现如下方法：
+    didFinishPickingMediaWithInfo //当user选择或create media的时候，该方法会被调用，接受参数为NSDictionary对象，包含media及其associate data
+    imagePickerControllerDidCancel //当user cancel操作则该方法会触发；
+  如上的2个方法都需要先 dismiss the view controller，例如：
+   -(void)imagePickerController:
+    (UIImagePickerController *)picker
+    didFinishPickingMediaWithInfo:(NSDictionary *)info
+    {
+         // Code here to work with media
+         [self dismissModalViewControllerAnimated:YES];
+         
+         //在这里info是一个NSDictionary类型；
+         NSString *mediaType = [info objectForKey:UIImagePickerControllerMediaType];
+         if ([mediaType isEqualToString:(NSString *)kUTTypeImage])
+          //media is an image
+         else if ([mediaType isEqualToString:(NSString *)kUTTypeMovie])
+          //media is a video
+          
+        //original image是：
+        UIImage *image = [info objectForKey: UIImagePickerControllerOriginalImage];
+        //如果可以编辑，则编辑之后的image为：
+        UIImage *image = [info objectForKey: UIImagePickerControllerEditedImage];
+        //如果media是一个video，则其url
+        NSURL *url = [info objectForKey:UIImagePickerControllerMediaURL];
+      }
+    
+    -(void)imagePickerControllerDidCancel:
+    (UIImagePickerController *)picker
+    {
+         [self dismissModalViewControllerAnimated:YES];
+    }
+  # detecting device检测硬件设备是否有camera:
+   if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera])
+   {
+      //code here
+   }
+   检测是否有photo album
+   if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeSavedPhotosAlbum])
+   {
+      //code here
+   }
+   检测是否支持photo libary
+   if ([UIImagePickerController isSourceTypeAvailable:
+     UIImagePickerControllerSourceTypePhotoLibrary])
+    {
+            // code here
+    }
+ # saving movies和images到libraries中：
+ 可以调用如下2个方法：
+    UIImageWriteToSavedPhotosAlbum
+    UISaveVideoAtPathToSavedPhotosAlbum
+  例如：
+  save an image:
+      UIImageWriteToSavedPhotosAlbum(image, self,
+       @selector(image:finishedSavingWithError:contextInfo:),
+       nil);
+  save an video:
+      if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(videoPath))
+      {
+           UISaveVideoAtPathToSavedPhotosAlbum(videoPath,
+                self,
+                @selector(video:finishedSavingWithError:contextInfo:),
+                nil);
+      }
+  callback的方法的定义：
+   -(void)image:(UIImage *)image
+    finishedSavingWithError:(NSError *)
+    error contextInfo:(void *)contextInfo
+    {
+        if (error) {
+             UIAlertView *alert = [[UIAlertView alloc]
+             initWithTitle: @"Save failed"
+             message: @"Failed to save image/video"
+             delegate: nil
+             cancelButtonTitle:@"OK"
+             otherButtonTitles:nil];
+             [alert show];
+        }
+    }
+更详细详见：
+http://www.techotopia.com/index.php/Accessing_the_iOS_5_iPhone_Camera_and_Photo_Library
+> 使用camera拍照的实例：
+ 主要实现的功能，拍照和浏览libraries的功能。
+ 1）创建project: single view application, no SB, with ARC;
+ 2) 添加framework：在project中选择Build phases，在link binary with libraries中添加MobileCoreServices.framework
+ 3) 在xib上修改UI:
+    UIImageView, 2个button；
+ 4) 添加代码；
+ 程序的测试，必须在真实的devices上进行；
+参考：
+  https://github.com/minjhe/iphone-code/tree/master/topic/CameraAlbum
+  http://www.techotopia.com/index.php/An_Example_iOS_5_iPhone_Camera_Application

@@ -1,0 +1,68 @@
+ios topic: page view
+> page view:
+ # UIPageViewController:
+  类似ibook的翻页卷曲效果；
+  通过 UIPageViewController 实现；
+  该类和普通的 view controller 不同，它是一种container controller，可以包含多个view controller；
+  每个对应一个view，从而可以在多个view之间进行切换；
+ # 一些configuration：
+  1）需要实现data source的接口：UIPageViewControllerDataSource，实现如下2个方法：
+    viewControllerAfterViewController (接受当前的view的view controller，返回下一个page的view的view controller)
+    viewControllerBeforeViewController (接受当前的view的view controller，返回上一个page的view的view controller)
+  这样做的原因是，没有必要一下子创建所有pages的view controller，按照需求创建，提高performance。
+  2）控制navigation的方向：
+    UIPageViewControllerNavigationOrientationHorizontal
+    UIPageViewControllerNavigationOrientationVertical
+  3) spine location:
+    UIPageViewControllerSpineLocationMin
+    UIPageViewControllerSpineLocationMax
+    UIPageViewControllerSpineLocationMid
+  4) 可以实现delegate的一些protocol
+    spineLocationForInterface
+    transitionComplete
+> 实例
+ 可以使用xcode提供的 Page-based Application 的template
+   默认创建一个包含12个月的月历。一般需要在其基础上进行修改；
+ （推荐）一般情况下从头自己创建 page view based的application，而且更快速。
+ 1) 创建一个single view application的project
+    不使用storyboard；
+    会生成一个继承自UIViewController的类 PVViewController，及其xib文件；
+ 2）创建content的view controller:
+    new一个file，选择继承自 UIViewController: ContentViewController，选择生成xib文件；
+    这个view controller其实表示各个page，翻页的时候，会自动生成该类的实例：
+    每页包含1个web view，同时定义其data是其属性：
+    .h
+      @interface ContentViewController : UIViewController
+      @property (strong, nonatomic) IBOutlet UIWebView *webview;
+      @property (strong, nonatomic) id webviewData;
+      @end
+    .m
+      -(void) viewWillAppear:(BOOL)animated
+      {
+          [super viewWillAppear:animated];
+          
+          //显示的时候，将属性webviewData的值，设置到webview上
+          [webview loadHTMLString:webviewData baseURL:[NSURL URLWithString:@""]];
+      }
+    ctrl+拖拽ContentViewController到xib文件上的webview。
+    
+   3）定义 PVViewController， 它需要包含一个 UIPageViewController 用于控制各个页面的调整；
+   同时还需要包含所有页面需要的data：
+  .h
+    @interface PVViewController : UIViewController <UIPageViewControllerDataSource>
+    //控制各个page之间的跳转
+    @property (strong, nonatomic) UIPageViewController *pageviewController;
+    //保存所有page的data
+    @property (strong, nonatomic) NSArray *pageDataAry;
+    @end
+  .m:
+    主要是：在viewDidLoad的时候初始化data和page view controller；
+    同时实现 前后翻页的2个方法。
+# 代码参考：
+  https://github.com/minjhe/iphone-code/tree/master/topics/PageView
+# 总结：
+  外面的view controller 包含 UIPageViewController 以及各个page的data；
+  每个page就对应一个view controller；
+参考：
+  http://www.techotopia.com/index.php/Implementing_a_Page_based_iOS_5_iPhone_Application_using_UIPageViewController
+  http://www.techotopia.com/index.php/An_Example_iOS_5_iPhone_UIPageViewController_Application
